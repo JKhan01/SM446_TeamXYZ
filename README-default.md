@@ -19,7 +19,6 @@ The developed software is a Python-based web application(Flask) which acts as an
 ## Built With
 - [Python](https://www.python.org/) -  The software is based on Python.
 - [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Additionally it also uses Javascript.
-- [Stackoverflow API](https://api.stackexchange.com/docs) - Used for searching solution to errors on Stack Overflow.
 - Atlassian APIs:
   - [JIRA API](https://developer.atlassian.com/server/jira/platform/rest-apis/) -  Used to access and execute tasks on the JIRA board.
   - [Bitbucket API](https://developer.atlassian.com/bitbucket/api/2/reference/) - Used to access the company’s Bitbucket repository.
