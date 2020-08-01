@@ -1,0 +1,141 @@
+actions:
+- utter_afirm
+- utter_branchList
+- utter_branch_name_entry
+- utter_branch_type_entry
+- utter_commitMsg
+- utter_commit_by_branch
+- utter_commit_by_user
+- utter_create_space
+- utter_error_query_entry
+- utter_get_pages_in_a_space
+- utter_goodbye
+- utter_greet
+- utter_info_of_a_space
+- utter_info_of_all_spaces
+- utter_message_entry
+- utter_owner_name_entry
+- utter_repoList
+- utter_repo_name_entry
+- utter_searchErrors
+- utter_space_key_entry
+- utter_space_name_entry
+- utter_user_name_entry
+- utter_watcherList
+entities:
+- bitbucket_action
+- branch_name
+- branch_type
+- create_key
+- error_keys
+- error_query
+- key
+- message
+- owner_name
+- repo_key
+- repo_name
+- search_key
+- space
+- user_name
+intents:
+- create_space
+- info_of_a_space
+- commit_by_branch
+- get_pages_in_a_space
+- commit_by_user
+- info_of_all_spaces
+- repo_name_entry
+- commitMsg
+- watcherList
+- greet
+- goodbye
+- affirm
+- deny
+- message_entry
+- owner_name_entry
+- space_name_entry
+- space_key_entry
+- branch_name_entry
+- user_name_entry
+- branch_type_entry
+- searchErrors
+- error_query_entry
+- repoList
+- branchList
+responses:
+  utter_afirm:
+  - text: You just affirmed
+  utter_branchList:
+  - text: 'List of all the branches on repo: {repo_name}'
+  utter_branch_name_entry:
+  - text: The branch name was {branch_name}
+  utter_branch_type_entry:
+  - text: 'The branch type was stated to be : {branch_type}'
+  utter_commitMsg:
+  - text: 'Commit check as per the message: {message}'
+  utter_commit_by_branch:
+  - text: 'you want to check commit on branch: {branch_name}'
+  utter_commit_by_user:
+  - text: 'You want to check for commit by user: {user_name}'
+  utter_create_space:
+  - text: 'you wish to create space with name: {space} key: {key}'
+  utter_error_query_entry:
+  - text: The query is {error_query}
+  utter_get_pages_in_a_space:
+  - text: 'You want all pages in a space with name: {space}'
+  utter_goodbye:
+  - text: Bye
+  utter_greet:
+  - text: Hey! How are you?
+  utter_info_of_a_space:
+  - text: 'You want info of space with key: {key}'
+  utter_info_of_all_spaces:
+  - text: You want info of all spaces
+  utter_message_entry:
+  - text: 'You just spoke a commit message: {message}'
+  utter_owner_name_entry:
+  - text: The owner is {owner_name}
+  utter_repoList:
+  - text: List of all repos
+  utter_repo_name_entry:
+  - text: The repo nae was given as {repo_name}
+  utter_searchErrors:
+  - text: 'You want solution on issue: {error_query}'
+  utter_space_key_entry:
+  - text: 'space key was set: {key}'
+  utter_space_name_entry:
+  - text: 'space name was set: {space}'
+  utter_user_name_entry:
+  - text: 'The user name is : {user_name}'
+  utter_watcherList:
+  - text: You want to get the list of watchers on repo:{repo_name} owner:{owner_name}
+session_config:
+  carry_over_slots_to_new_session: true
+  session_expiration_time: 60
+slots:
+  branch_name:
+    type: unfeaturized
+  branch_type:
+    initial_value: other
+    type: categorical
+    values:
+    - release
+    - bugfixes
+    - other
+    - feature
+    - hotfix
+    - __other__
+  error_query:
+    type: text
+  key:
+    type: text
+  message:
+    type: text
+  owner_name:
+    type: text
+  repo_name:
+    type: text
+  space:
+    type: text
+  user_name:
+    type: text
