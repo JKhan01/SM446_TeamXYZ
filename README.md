@@ -27,7 +27,7 @@ The developed software is a Python-based command line software and an intranet (
 * Nikunj Gaonkar
 * Om Rao
 * Rohit Kadam
-#### Mentors
+#### Mentors:
 * Tanmay Gujar
 * Dylan Dsouza
 
