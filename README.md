@@ -20,12 +20,14 @@ The developed software is a Python-based command line software and an intranet (
 
 
 ## Authors
+#### Team XYZ:
 * Shritej Patil
 * Jamaluddin Khan
 * Pooja More
 * Nikunj Gaonkar
 * Om Rao
 * Rohit Kadam
+#### Mentors
 * Tanmay Gujar
 * Dylan Dsouza
 
