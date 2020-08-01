@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ChatBeginning
+        </title>
+    </head>
+    <body>
+        <form action="/printtoken" method="GET">
+            <input type="hidden" name='code' id='val'>
+            <input type="submit">
+        </form>
+        <script>
+            var sel = document.querySelector('#val');
+            sel.value = window.location.split('=')[1];             
+        </script>
+    </body>
+</html>

@@ -1,0 +1,144 @@
+actions:
+- action_bitbucket
+- utter_ask_bitbucket_action
+- utter_ask_branch_name
+- utter_ask_duration_keys
+- utter_ask_error_action
+- utter_ask_message
+- utter_ask_owner_name
+- utter_ask_repo_name
+- utter_ask_user_name
+- utter_bitbucket_search
+- utter_create
+- utter_did_that_help
+- utter_error_query
+- utter_error_search
+- utter_get_exact_domain
+- utter_goodbye
+- utter_greet
+- utter_happy
+- utter_rephrase_please
+- utter_search
+- utter_slots_values
+- utter_update
+entities:
+- bitbucket_action
+- bitbucket_key
+- branch_name
+- branch_type
+- duration_keys
+- error_action
+- error_keys
+- message
+- owner_key
+- owner_name
+- project_name
+- repo_key
+- repo_name
+- search_keys
+- user_name
+forms:
+- branch_form
+- commit_form
+- commit_msg_form
+- error_form
+- repo_form
+- watchers_form
+intents:
+- commitMsg
+- owner_name_entry
+- repo_name_entry
+- message_entry
+- commitBitbucket
+- repoList
+- branchList
+- error_action_entry
+- searchErrors
+- search
+- user_name_entry
+- branch_name_entry
+- affirm
+- greet
+- deny
+- update
+- stop
+- goodbye
+- create
+- bitbucket_action_entry
+- watchersList
+responses:
+  utter_ask_bitbucket_action:
+  - text: Do you want me to fetch code or get the list of developers?
+  utter_ask_branch_name:
+  - text: Any specific branch you looking for?
+  utter_ask_duration_keys:
+  - text: From which specific time phase do you want the info
+  utter_ask_error_action:
+  - text: What is the exact error?
+  utter_ask_message:
+  - text: You didn't specify a message to check on commits
+  utter_ask_owner_name:
+  - text: Who is the owner of the workspaces?
+  utter_ask_repo_name:
+  - text: Which Exact repo are you talking about?
+  utter_ask_user_name:
+  - text: Any specific user commit?
+  utter_bitbucket_search:
+  - text: Your intent was to get updates or codes from bitbucket.
+  utter_create:
+  - text: You want to create.
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_error_query:
+  - text: The Query is {error_action}
+  utter_error_search:
+  - text: Your intent was to perform troubleshooting.
+  utter_get_exact_domain:
+  - text: Which area are you exactly looking for Stackoverflow or Bitbucket?
+  utter_goodbye:
+  - text: Bye
+  utter_greet:
+  - text: Hey! How are you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_rephrase_please:
+  - text: Sorry, can you please rephrase then?
+  utter_search:
+  - text: You wanted me to search something or get you some data. Is that right?
+  utter_slots_values:
+  - text: 'Your request has the following constraints: repository: {repo_name}, branch:
+      {branch_name}, owner: {owner_name}, user: {user_name}'
+  utter_update:
+  - text: You want to update.
+session_config:
+  carry_over_slots_to_new_session: true
+  session_expiration_time: 60
+slots:
+  bitbucket_action:
+    type: text
+  bitbucket_key:
+    type: list
+  branch_name:
+    type: text
+  branch_type:
+    initial_value: other
+    type: text
+  duration_keys:
+    initial_value: latest
+    type: unfeaturized
+  error_action:
+    type: text
+  error_keys:
+    type: text
+  message:
+    type: text
+  owner_name:
+    type: text
+  repo_name:
+    type: text
+  requested_slot:
+    type: unfeaturized
+  search_keys:
+    type: text
+  user_name:
+    type: text
