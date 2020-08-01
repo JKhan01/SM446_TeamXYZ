@@ -10,29 +10,24 @@ The developed software is a Python-based command line software and an intranet (
 ### Installing
 
 
-## Running the tests
-
-
-### Break down into end to end tests
-
-
-### And coding style tests
-
-
 ## Deployment
 
 
 ## Built With
 
 
-## Contributing
-
-
 ## Versioning
 
 
 ## Authors
-
+* Shritej Patil
+* Jamaluddin Khan
+* Pooja More
+* Nikunj Gaonkar
+* Om Rao
+* Rohit Kadam
+* Tanmay Gujar
+* Dylan Dsouza
 
 ## License
 
