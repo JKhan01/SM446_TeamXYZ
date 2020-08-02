@@ -45,9 +45,11 @@ class InfoAllSpaces(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        get_all_spaces()
+        t = get_all_spaces()
+        tx = json.dumps(t, indent=4)
+        txt = json.loads(tx)
 
-        dispatcher.utter_message(text="Done")
+        dispatcher.utter_message(text=txt)
 
         return []
 
@@ -79,8 +81,7 @@ class CreateSpace(FormAction):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict]:
 
-        #dispatcher.utter_message(text="Kya baat hai!!")
-        #dispatcher.utter_message(template="utter_submit")
+
 
         a = str(tracker.get_slot('key'))
         b = str(tracker.get_slot('space'))
@@ -96,6 +97,7 @@ class CreateSpace(FormAction):
             return []
 
         run(self, CollectingDispatcher, Tracker, Dict[Text, Any])
+        dispatcher.utter_message(text="Space Created")
         return [] 
 
     
@@ -110,9 +112,11 @@ class InfoSpace(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         a = str(tracker.get_slot("key"))
-        get_info_space(a)
+        t = get_info_space(a)
+        tx = json.dumps(t, indent = 2)
+        txt = json.loads(tx)
 
-        #dispatcher.utter_message(text="Done")
+        dispatcher.utter_message(text=txt)
 
         return []        
 
@@ -128,9 +132,11 @@ class GetPagesInSpace(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         a = str(tracker.get_slot("space"))
-        get_pages_in_a_space(a)
+        t = get_pages_in_a_space(a)
+        tx = json.dumps(t, indent=4)
+        txt = json.loads(tx)
 
-        #dispatcher.utter_message(text="Done")
+        dispatcher.utter_message(text=txt)
 
         return []        
 
@@ -190,6 +196,7 @@ class CreatePage(FormAction):
             return []
 
         run(self, CollectingDispatcher, Tracker, Dict[Text, Any])
+        dispatcher.utter_message(text="Page Created")
         return []        
 
 
@@ -248,13 +255,16 @@ class CheckPageExists(FormAction):
                 tracker: Tracker,
                 domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-            check_page_exists(a, b)
+            t = check_page_exists(a, b)
             
             #dispatcher.utter_message(text="Space Created")
             
-            return []
+            return [t]
 
-        run(self, CollectingDispatcher, Tracker, Dict[Text, Any])
+        t = run(self, CollectingDispatcher, Tracker, Dict[Text, Any])
+        tx = json.dumps(t, indent = 4)
+        txt = json.dumps(tx)
+        dispatcher.utter_message(text=txt)
         return []
 
 
@@ -295,13 +305,16 @@ class GetPageId(FormAction):
                 tracker: Tracker,
                 domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-            get_page_id(a, b)
+            t = get_page_id(a, b)
             
             #dispatcher.utter_message(text="Space Created")
             
-            return []
+            return [t]
 
-        run(self, CollectingDispatcher, Tracker, Dict[Text, Any])
+        t = run(self, CollectingDispatcher, Tracker, Dict[Text, Any])
+        tx = json.dumps(t)
+        
+        dispatcher.utter_message(text=tx)
         return []
 
 
@@ -316,9 +329,11 @@ class GetPageSpace(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         a = int(str(tracker.get_slot("page_id")))
-        get_page_space(a)
+        t = get_page_space(a)
+        tx = json.dumps(t)
+        #txt = json.dumps(tx)
 
-        #dispatcher.utter_message(text="Page Deleted")
+        dispatcher.utter_message(text=tx)
 
         return []
 
@@ -334,9 +349,10 @@ class GetPageInfoById(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         a = int(str(tracker.get_slot("page_id")))
-        page_info_by_id(a)
-
-        #dispatcher.utter_message(text="Page Deleted")
+        t = page_info_by_id(a)
+        tx = json.dumps(t, indent = 2)
+        txt = json.loads(tx)
+        dispatcher.utter_message(text=txt)
 
         return []
 
@@ -378,13 +394,17 @@ class GetPageInfoByTitle(FormAction):
                 tracker: Tracker,
                 domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-            page_info_by_title(a, b)
+            t = page_info_by_title(a, b)
             
             #dispatcher.utter_message(text="Space Created")
             
-            return []
+            return [t]
 
-        run(self, CollectingDispatcher, Tracker, Dict[Text, Any])
+        t = run(self, CollectingDispatcher, Tracker, Dict[Text, Any])
+        tx = json.dumps(t, indent = 2)
+        txt = json.loads(tx)
+        txtt = json.dumps(txt)
+        dispatcher.utter_message(text=txtt)
         return []        
 
 
@@ -433,4 +453,5 @@ class ExportPageAsPdf(FormAction):
             return []
 
         run(self, CollectingDispatcher, Tracker, Dict[Text, Any])
+        dispatcher.utter_message(text="Page Exported")
         return []
