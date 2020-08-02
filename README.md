@@ -5,12 +5,12 @@ The developed software is a Python-based web application(Flask) which acts as an
 #### Abstract Architecture diagram of the project.
 ##### Architecture diagram for chat:
 <div align="center">
-  <img src="https://github.com/JKhan01/SIH2020/blob/Pooja/IMG-20200802-WA0000.jpg"><br><br>
+  <img src="https://github.com/JKhan01/SIH2020/blob/Pooja/IMG-20200802-WA0004.jpg"><br><br>
 </div>
 
 ##### Architecture diagram for meeting:
 <div align="center">
-  <img src="https://github.com/JKhan01/SIH2020/blob/Pooja/IMG-20200802-WA0001.jpg"><br><br>
+  <img src="https://github.com/JKhan01/SIH2020/blob/Pooja/IMG-20200802-WA0003.jpg"><br><br>
 </div>
 
 ## Getting Started
