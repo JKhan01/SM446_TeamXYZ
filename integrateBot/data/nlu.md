@@ -321,6 +321,18 @@
 - the page id is [3759290](page_id)
 - [0240522](page_id)
 
+## intent:get_page_info_by_id
+- get the details of the page which has id [3984322](page_id)
+- fetch the complete information about the page with id [9923569](page_id)
+- I want the details of the page whose id is [5767184](page_id)
+- retrieve the details about the page with page id [5982355](page_id)
+- the page with page id [9923569](page_id) fetch all that pages details
+- get the entire info of the page whose page id is [5767184](page_id)
+- Jarvis get the info about the page having id [9836421](page_id)
+- Jarvis I want you to fetch the complete details you have about the page having id [3587232](page_id)
+- get the page info having id [5767184](page_id)
+- get the info of the page having id [5767184](page_id)
+
 ## intent:export_page_as_pdf
 - export the page having id [3984322](page_id) as a pdf file named [no_idea](file_name)
 - the page whose id is [5767184](page_id) is to be exported as a pdf file with the name [bruh](file_name)

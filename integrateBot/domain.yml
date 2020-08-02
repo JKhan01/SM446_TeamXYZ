@@ -1,4 +1,26 @@
 actions:
+- action_delete_page
+- action_get_page_info_by_id
+
+- action_get_pages_in_a_space
+- action_info_of_all_spaces
+- action_space_info
+
+- utter_ask_body
+- utter_ask_file_name
+- utter_ask_key
+- utter_ask_page_id
+- utter_ask_space
+- utter_ask_title
+
+- utter_create_page_slot_values
+- utter_create_space_slot_values
+- utter_export_page_as_pdf_slot_values
+- utter_get_pages_in_a_space_slot_value
+- utter_pages_in_a_space_slot_value
+- utter_space_info_slot_value
+- utter_submit
+
 - utter_afirm
 - utter_ask_branch_name
 - utter_ask_error_query
@@ -10,16 +32,13 @@ actions:
 - utter_commitMsg
 - utter_commit_by_branch
 - utter_commit_by_user
-- utter_create_space
-- utter_get_pages_in_a_space
+
 - utter_goodbye
 - utter_greet
-- utter_info_of_a_space
-- utter_info_of_all_spaces
+
 - utter_repoList
 - utter_searchErrors
-- utter_space_key_entry
-- utter_space_name_entry
+
 - utter_user_name_entry
 - utter_watcherList
 entities:
@@ -40,6 +59,7 @@ entities:
 - space
 - title
 - user_name
+- page_id
 forms:
 - branch_list_form
 - commit_by_branch_form
@@ -48,6 +68,11 @@ forms:
 - error_search_form
 - repo_list_form
 - watcher_list_form
+- create_page_form
+- create_space_form
+- export_page_as_pdf_form
+
+
 intents:
 - owner_name_entry
 - repo_name_entry
@@ -76,6 +101,7 @@ intents:
 - create_page
 - title_entry
 - body_entry
+- get_page_info_by_id
 - export_page_as_pdf
 - file_name_entry
 responses:
@@ -101,18 +127,18 @@ responses:
   - text: 'you want to check commit on branch: {branch_name}'
   utter_commit_by_user:
   - text: 'You want to check for commit by user: {user_name}'
-  utter_create_space:
-  - text: 'you wish to create space with name: {space} key: {key}'
-  utter_get_pages_in_a_space:
+  # utter_create_space:
+  # - text: 'you wish to create space with name: {space} key: {key}'
+  utter_get_pages_in_a_space_slot_value:
   - text: 'You want all pages in a space with name: {space}'
   utter_goodbye:
   - text: Bye
   utter_greet:
   - text: Hey! How are you?
-  utter_info_of_a_space:
-  - text: 'You want info of space with key: {key}'
-  utter_info_of_all_spaces:
-  - text: You want info of all spaces
+  # utter_info_of_a_space:
+  # - text: 'You want info of space with key: {key}'
+  # utter_info_of_all_spaces:
+  # - text: You want info of all spaces
   utter_repoList:
   - text: List of all repos
   utter_searchErrors:
@@ -125,6 +151,43 @@ responses:
   - text: '{"status":200,"reply":The user name is : {user_name}}'
   utter_watcherList:
   - text: You want to get the list of watchers on repo:{repo_name} owner:{owner_name}
+
+  utter_ask_body:
+  - text: Enter the body of the page to be created
+  utter_ask_file_name:
+  - text: Enter the name of the pdf file to be created
+  utter_ask_key:
+  - text: Enter the key of the space
+  utter_ask_page_id:
+  - text: Enter the id of page
+  utter_ask_space:
+  - text: Enter the name of the space
+  utter_ask_title:
+  - text: Enter the title of the page
+  # utter_check_page_exists_slot_values:
+  # - text: The page titled {title} has to be checked in the space {space}
+  utter_create_page_slot_values:
+  - text: "The page to be created has the following details:\n - space: {space}\n\
+      \ - title: {title}\n - body: {body}"
+  utter_create_space_slot_values:
+  - text: The name of the space to be created is {space} and the key is {key}
+  utter_export_page_as_pdf_slot_values:
+  - text: "The details about the page to be exported as pdf:\n - id : {page_id}\n\
+      \ - pdf file name : {file_name}"
+  # utter_get_page_id_slot_values:
+  # - text: Id has to be fetch of the page titled {title} present in the space {space}
+  # utter_get_page_info_by_title_slot_values:
+  # - text: The page whose info is to be fetched has title {title} and exists in the
+  #     space {space}
+
+  utter_pages_in_a_space_slot_value:
+  - text: The pages have to be retrieved from the space named {space}
+  utter_space_info_slot_value:
+  - text: The space whose details are to be fetched has the key {key}
+  utter_submit:
+  - text: Done   
+
+
 session_config:
   carry_over_slots_to_new_session: false
   session_expiration_time: 60

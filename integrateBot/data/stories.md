@@ -10,7 +10,7 @@
 * greet
   - utter_greet
 * info_of_all_spaces
-  - utter_info_of_all_spaces  
+  - action_info_of_all_spaces  
 * goodbye
   - utter_goodbye
 
@@ -38,18 +38,20 @@
   - form{"name": "error_search_form"}
   - form{"name": null}
   - utter_searchErrors
-## create space path
+
+
+## create space
 * greet
   - utter_greet
 * create_space
-  <!-- - create_space_form
+  - create_space_form
   - form{"name" : "create_space_form"}
   - form{"name" : null}
   - utter_create_space_slot_values
-  - utter_submit -->
-  - utter_create_space
+  - utter_submit
 * goodbye
   - utter_goodbye
+
 
 ## watcherList path 1
 * watcher_list
@@ -84,58 +86,92 @@
   - utter_space_key_entry
 
 
-## info of a space path 1
-* info_of_a_space
-  - utter_info_of_a_space
-
-## info of a space path 2
+## info of a space
 * greet
   - utter_greet
 * info_of_a_space
-  - utter_info_of_a_space
-
-
-## get pages in a space path 1
-* greet
-  -utter_greet
-* get_pages_in_a_space
-  <!-- - action_get_pages_in_a_space
-  - utter_pages_in_a_space_slot_value
-  - utter_submit   -->
-  - utter_get_pages_in_a_space
+  - action_space_info
+  - utter_space_info_slot_value
+  - utter_submit 
 * goodbye
   - utter_goodbye
 
 
-## get pages in a space path 2
+## get pages in a space
+* greet
+  -utter_greet
 * get_pages_in_a_space
-  <!-- - action_get_pages_in_a_space
+  - action_get_pages_in_a_space
   - utter_pages_in_a_space_slot_value
-  - utter_submit   -->
-  - utter_get_pages_in_a_space
-<!-- ## interactive_story_1
-* watcherList{"search_key": " search_key", "repo_key": "repo"}
-    - utter_watcherList
-* watcherList{"search_key": " search_key", "repo_key": "repo", "repo_name": "art-2020"}
-    - slot{"repo_name": "art-2020"}
-    - utter_watcherList
-* watcherList{"repo_key": "repo", "repo_name": "secTest"}
-    - slot{"repo_name": "secTest"}
-    - utter_watcherList
-* create_space{"space": "plagiarisms"}
-    - slot{"space": "plagiarisms"}
-    - utter_create_space
-* repo_name_entry{"repo_key": "repo", "repo_name": "sih2020"}
-    - slot{"repo_name": "sih2020"}
-    - utter_repo_name_entry
-* commitMsg{"search_key": "fetch me", "message": "operation"}
-    - slot{"message": "operation"}
-    - utter_commitMsg
-* info_of_all_spaces{"search_key": " search_key"}
-    - utter_info_of_all_spaces
-* message_entry{"message": "transaction operation"}
-    - slot{"message": "transaction operation"}
-    - utter_message_entry -->
+  - utter_submit  
+* goodbye
+  - utter_goodbye
+
+
+## create page
+* greet
+  - utter_greet
+* create_page
+  - create_page_form
+  - form{"name": "create_page_form"}
+  - form{"name": null}
+  - utter_create_page_slot_values
+  - utter_submit
+* goodbye
+  - utter_goodbye
+
+
+## delete page
+* greet
+  - utter_greet
+* delete_page
+  - action_delete_page
+  - utter_submit
+* goodbye
+  - utter_goodbye
+
+## delete page 2
+* greet
+  - utter_greet
+* delete_page
+  - utter_ask_page_id
+  - action_delete_page
+* goodbye
+  - utter_goodbye
+
+
+# get page info by id
+* greet
+  - utter_greet
+* get_page_info_by_id
+  - action_get_page_info_by_id
+  - utter_submit  
+* goodbye
+  - utter_goodbye
+
+# get page info by id 2
+* greet
+  - utter_greet
+* get_page_info_by_id
+  - utter_ask_page_id
+  - action_get_page_info_by_id
+  - utter_submit  
+* goodbye
+  - utter_goodbye 
+
+
+# export page as pdf 
+* greet
+  - utter_greet
+* export_page_as_pdf
+  - export_page_as_pdf_form
+  - form{"name": "export_page_as_pdf_form"}
+  - form{"name": null}
+  - utter_export_page_as_pdf_slot_values
+  - utter_submit  
+* goodbye
+  - utter_goodbye  
+
 
 
 
@@ -317,3 +353,53 @@
     - form{"name": null}
     - slot{"requested_slot": null}
     - utter_commitMsg
+
+
+## interactive_story_1
+* greet
+    - utter_greet
+* create_space{"space": "Shritej", "key": "shritej"}
+    - slot{"key": "shritej"}
+    - slot{"space": "Shritej"}
+    - create_space_form
+    - form{"name": "create_space_form"}
+    - slot{"space": "Shritej"}
+    - slot{"key": "shritej"}
+    - slot{"space": "Shritej"}
+    - slot{"key": "shritej"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_create_space_slot_values
+    - utter_submit
+* goodbye
+    - utter_goodbye
+
+## interactive_story_1
+* greet
+    - utter_greet
+* create_space{"space": "Boat", "key": "boat"}
+    - slot{"key": "boat"}
+    - slot{"space": "Boat"}
+    - create_space_form
+    - form{"name": "create_space_form"}
+    - slot{"space": "Boat"}
+    - slot{"key": "boat"}
+    - slot{"space": "Boat"}
+    - slot{"key": "boat"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_create_space_slot_values
+    - utter_submit
+* goodbye
+    - utter_goodbye
+
+
+## interactive_story_1
+* greet
+    - utter_greet
+* get_page_info_by_id{"page_id": "5767184"}
+    - slot{"page_id": "5767184"}
+    - action_get_page_info_by_id
+    - utter_submit
+* goodbye
+    - utter_goodbye    
