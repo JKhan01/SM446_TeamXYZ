@@ -15,19 +15,29 @@
   - utter_goodbye
 
 ## commitMsg path
-* commitMsg
-  <!-- - commit_msg_form
+* commit_msg
+  - commit_msg_form
   - form{"name": "commit_msg_form"}
   - form{"name": null}
-  - utter_slots_values -->
   - utter_commitMsg
 
-## message entry path
-* message_entry
-  - utter_message_entry
+
+## searchError path
+* error_search
+  - error_search_form
+  - form{"name": "error_search_form"}
+  - form{"name": null}
+  - utter_searchErrors
 
 
-
+## searchError path 2
+* greet
+  - utter_greet
+* error_search
+  - error_search_form
+  - form{"name": "error_search_form"}
+  - form{"name": null}
+  - utter_searchErrors
 ## create space path
 * greet
   - utter_greet
@@ -42,31 +52,21 @@
   - utter_goodbye
 
 ## watcherList path 1
-* watcherList
-  <!-- - watchers_form
-  - form{"name": "watchers_form"}
+* watcher_list
+  - watcher_list_form
+  - form{"name": "watcher_list_form"}
   - form{"name": null}
-  - utter_slots_values -->
   - utter_watcherList
 
 ## watcherList path 2
 * greet
   - utter_greet
-* watcherList
-  <!-- - watchers_form
-  - form{"name": "watchers_form"}
+* watcher_list
+  - watcher_list_form
+  - form{"name": "watcher_list_form"}
   - form{"name": null}
-  - utter_slots_values -->
   - utter_watcherList
 
-
-
-## owner name entry path
-* owner_name_entry
-  - utter_owner_name_entry
-## repo name entry path
-* repo_name_entry
-  - utter_repo_name_entry
 
 ## space name entry path
 * space_name_entry
@@ -113,7 +113,7 @@
   - utter_pages_in_a_space_slot_value
   - utter_submit   -->
   - utter_get_pages_in_a_space
-## interactive_story_1
+<!-- ## interactive_story_1
 * watcherList{"search_key": " search_key", "repo_key": "repo"}
     - utter_watcherList
 * watcherList{"search_key": " search_key", "repo_key": "repo", "repo_name": "art-2020"}
@@ -135,38 +135,45 @@
     - utter_info_of_all_spaces
 * message_entry{"message": "transaction operation"}
     - slot{"message": "transaction operation"}
-    - utter_message_entry
+    - utter_message_entry -->
 
 
 
 ## repoList path 1
-* repoList
-  <!-- - repo_form
-  - form{"name": "repo_form"}
+* repo_list
+  - repo_list_form
+  - form{"name": "repo_list_form"}
   - form{"name": null}
-  - utter_slots_values -->
   - utter_repoList
 
 ## branchList path 1
-* branchList
+* branch_list
+  - branch_list_form
+  - form{"name":"branch_list_form"}
   - utter_branchList
 
-## branch type entry path 1
+<!-- ## branch type entry path 1
 * branch_type_entry
-  - utter_branch_type_entry
+  - utter_branch_type_entry -->
 
-## branch name entry path 1
+<!-- ## branch name entry path 1
 * branch_name_entry
-  - utter_branch_name_entry
+  - utter_branch_name_entry -->
 
 ## commit by user path
 * commit_by_user
+  - commit_by_user_form
+  - form{"name": "commit_by_user_form"}
+  - form{"name": null}
   - utter_commit_by_user
 
 ## commit by branch path
 * commit_by_branch
+  - commit_by_branch_form
+  - form{"name": "commit_by_branch_form"}
+  - form{"name": null}
   - utter_commit_by_branch
-## interactive_story_1
+<!-- ## interactive_story_1
 * commit_by_branch{"search_key": "who", "bitbucket_action": " commit", "branch_name": "master"}
     - slot{"branch_name": "master"}
     - utter_commit_by_branch
@@ -183,4 +190,4 @@
     - utter_info_of_a_space
 * get_pages_in_a_space{"search_key": "bring me", "space": "setup"}
     - slot{"space": "setup"}
-    - utter_get_pages_in_a_space
+    - utter_get_pages_in_a_space -->

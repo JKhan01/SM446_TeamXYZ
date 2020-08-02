@@ -35,7 +35,7 @@
 - no way
 - not really
 
-## intent:commitMsg
+## intent:commit_msg
 - hey Jarvis, [get](search_key) the commit for story [text extraction](message)
 - [fetch the](search_key) commit details with [message payment operation]{"entity": "message", "value": "payment operation"}
 - who did the commit for [text summarization](message)
@@ -103,7 +103,7 @@
 - hey jarvis, [get me]{"entity": "search_key", "value": " search_key"} info about all the spaces
 - [get all](search_key) the spaces from confluence
 
-## intent:watcherList
+## intent:watcher_list
 - hey Jarvis, [get me](search_key) the list of watchers on repo [workingonatlassianapis]{"entity": "repo_name", "value": "wokringonatlassianapis"}
 - [who all](search_key) are the watchers on repo [test](repo_name)
 - [get me](search_key) the watchers.
@@ -116,13 +116,13 @@
 - [get me]{"entity": "search_key", "value": " search_key"} the list of watchers on [repo](repo_key) [art-2020](repo_name)
 - jarvis, list all the watchers on [repo](repo_key) [secTest](repo_name)
 
-## intent:repoList
+## intent:repo_list
 - hey Jarvis, [get me](search_key) the list of [repository](repo_key).
 - [what are](search_key) the [repositories](repo_key) under [workspace jkhan01]{"entity": "owner_name", "value": "jkhan01"}?
 - find all the [repos](repo_key) with [owner art-2020]{"entity": "owner_name", "value": "art-2020"}
 - list all [repo](repo_key) owned by [tanmaygujar](owner_name)
 
-## intent:branchList
+## intent:branch_list
 - [get me](search_key) the branches on [repo workingonatlassianapis]{"entity": "repo_name", "value": "wokringonatlassianapis"}
 - hey Jarvis, [find the](search_key) branches under [repository test]{"entity": "repo_name", "value": "test"}
 - list all the branches.
@@ -222,7 +222,7 @@
 - [display](search_key) all the pages that are present in the space whose name is [Bro](space)
 - Hey, jarvis [bring me](search_key) all the pages which have space name as [setup](space)
 
-## intent:searchErrors
+## intent:error_search
 - hey Jarvis, [find me](search_key) the [solution to the error](error_keys)
 - [Help me](search_key) out with the [error](error_keys)
 - [what is](search_key) the best answer to the [problem of value error](error_keys)?
@@ -244,6 +244,89 @@
 - [floating point error](error_query)
 - [no module name flask found](error_query)
 
+
+## intent:create_page
+- [create](create_key) a new page with title [Sample](title) in the space [Chemistry](space) with the body ["Bro!! this is nothing new"](body)
+- [create](create_key) page named [Demo](title)
+- new page for the title [Kya](title)
+- [make](create_key) a new page with the name [random](title)
+- [create](create_key) a new page titled [new page](title)
+- [develop](create_key) a page whose name is [work](title)
+- Jarvis could you [create](create_key) a page named [Stuff](title) for me
+- [create](create_key) a new page for me with the title [Page](title)
+- Jarvis I want you to [create](create_key) a new page with the title [Bruh](title) in the space [Math](space)
+- [generate](create_key) a page titled [Title](title) with body as ["This is messed up"](body) in the space [BroCode](space)
+- build a novel page in the space [Biology](space) with title as [Reproductive System](title) and having a body ["This is how we reproduce, and multiply as well."](body)
+- [fabricate](create_key) a page named [Boi](title) in the space [BroCode](space) with a body ["This is swag"](body)
+- Jarvis make a new page in the space [Physics](space) under the title [Light](title) and a body ["Light travels in a straight line."](body)
+- Jarvis make a new page in the space [Physics](space) under the title [Magnetism](title)
+- [make](create_key) a pristine page having a title [Shit](title) having body as ["Bro this is pretty messed up. Sort it out."](body) in the space [Bruh](space)
+- make a new page [New](title) comprising a body which is ["This is pretty novel, let's improve it."](body)
+- I just want you to give me a new page named [Bruhhh](title) and create it in the space named [Swag](space)
+- [create](create_key) new page [Page](title) with body ["this is a new page  bruh."](body) and do this in the space with the name [KyaBaat](space)
+
+## intent:title_entry
+- the title of the page is [Title](title)
+- [Kya Baat Hai](title)
+- the page is titled [Bruh this is enough](title)
+- [This is the Title](title)
+- The title shall be [Enough](title)
+- [Bro Swag](title) shall be the title
+- The page should have title[Deployment and Testing of chatbot](title)
+- the page has the title [Socket communications on chatbot](title)
+- the page to be created should have the title [Integration of the Domains](title)
+
+## intent:body_entry
+- the body for the page to be created is ["This is the beeping body."](body)
+- ["Kya baat hai bantai, aise hi chalte raho"](body)
+- ["This page entails all the details about the stock prices of various companies."](body)
+- ["What a strike by Lionel Messi!! Just Brilliant"](body)
+- The body is ["A water molecule has two atoms of hydrogen and one atom of oxygen."](body)
+- ["And here is Messi, away from two, three, four, wonderful, wonderful, wonderful. How good is he? A near supernatural goal from Lionel Messi"](body)
+- ["This is really really very boring mah boi"](body) is the body of the page to be created
+- ["enough brother, that's enough!!"](body) is the body of the page that is going to be created
+
+## intent:delete_page
+- delete the page
+- remove the page
+- eliminate the page
+- destroy the page
+- delte the page with id [2345167](page_id)
+- remove the page having page id [2315867](page_id)
+- jarvis find and remove the page whose id is [2348798](page_id)
+- Jarvis could you delete the page having the id [4254867](page_id)
+
+## intent:page_id_entry
+- the id of the page is [3525426](page_id)
+- id is [3252359](page_id)
+- [7985722](page_id)
+- [0375025](page_id)
+- [9877321](page_id)
+- [3642302](page_id)
+- the page id is [3759290](page_id)
+- [0240522](page_id)
+
+## intent:export_page_as_pdf
+- export the page having id [3984322](page_id) as a pdf file named [no_idea](file_name)
+- the page whose id is [5767184](page_id) is to be exported as a pdf file with the name [bruh](file_name)
+- Jarvis export a page with id [9836421](page_id) as a pdf file whose name is [sample](file_name)
+- I want a page to be exported as pdf
+- export a page as pdf
+- Jarvis could you export a page as pdf
+- Jarvis I want you to export the page with page id [9923569](page_id) as a pdf file named [physics](file_name)
+- the page with id [3984322](page_id) is to be exported as a pdf file
+- the page with id [3984322](page_id) is to be exported as a pdf file titled [bro](file_name)
+
+
+## intent:file_name_entry
+- the name of the pdf file is [tester](file_name)
+- [physics](file_name)
+- pdf file must be named [mechanics](file_name)
+- [biology](file_name) is the name of the pdf file to be created
+- [Physics](file_name)
+- [Math](file_name) is the title of the pdf file
+- the pdf file's name is [physics](file_name)
+- [Chemistry](file_name)
 ## synonym: commit
 - commit
 - code
