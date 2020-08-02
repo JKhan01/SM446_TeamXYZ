@@ -191,3 +191,129 @@
 * get_pages_in_a_space{"search_key": "bring me", "space": "setup"}
     - slot{"space": "setup"}
     - utter_get_pages_in_a_space -->
+
+## interactive_story_1
+* watcher_list{"search_key": " search_key"}
+    - watcher_list_form
+    - form{"name": "watcher_list_form"}
+    - slot{"requested_slot": "repo_name"}
+* form: repo_name_entry{"repo_name": "workingonatlassianapis"}
+    - slot{"repo_name": "workingonatlassianapis"}
+    - form: watcher_list_form
+    - slot{"repo_name": "workingonatlassianapis"}
+    - slot{"requested_slot": "owner_name"}
+* form: owner_name_entry{"owner_name": "jkhan01"}
+    - slot{"owner_name": "jkhan01"}
+    - form: watcher_list_form
+    - slot{"owner_name": "jkhan01"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_watcherList
+
+## interactive_story_2
+* repo_list{"search_key": " search_key", "repo_key": "repositories"}
+    - repo_list_form
+    - form{"name": "repo_list_form"}
+    - slot{"requested_slot": "owner_name"}
+* form: owner_name_entry{"owner_name": "jkhan01"}
+    - slot{"owner_name": "jkhan01"}
+    - form: repo_list_form
+    - slot{"owner_name": "jkhan01"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_repoList
+* watcher_list{"search_key": "get", "repo_key": "repo", "repo_name": "test"}
+    - slot{"repo_name": "test"}
+    - watcher_list_form
+    - form{"name": "watcher_list_form"}
+    - slot{"repo_name": "test"}
+    - slot{"owner_name": "jkhan01"}
+    - slot{"repo_name": "test"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_watcherList
+
+## interactive_story_3
+* watcher_list{"search_key": " search_key", "repo_key": "repo", "repo_name": "test", "owner_name": "jkhan01"}
+    - slot{"owner_name": "jkhan01"}
+    - slot{"repo_name": "test"}
+    - watcher_list_form
+    - form{"name": "watcher_list_form"}
+    - slot{"repo_name": "test"}
+    - slot{"owner_name": "jkhan01"}
+    - slot{"repo_name": "test"}
+    - slot{"owner_name": "jkhan01"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_watcherList
+* watcher_list{"search_key": " search_key", "repo_key": "repo", "repo_name": "art-2020", "owner_name": "art2020"}
+    - slot{"owner_name": "art2020"}
+    - slot{"repo_name": "art-2020"}
+    - watcher_list_form
+    - form{"name": "watcher_list_form"}
+    - slot{"repo_name": "art-2020"}
+    - slot{"owner_name": "art2020"}
+    - slot{"repo_name": "art-2020"}
+    - slot{"owner_name": "art2020"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_watcherList
+* commit_by_branch{"bitbucket_action": " commit", "repo_key": "repo", "owner_name": "art-2020", "repo_name": "art2020"}
+    - slot{"owner_name": "art2020"}
+    - slot{"repo_name": "art-2020"}
+
+## interactive_story_4
+* commit_by_branch{"bitbucket_action": " commit", "repo_key": "repo", "repo_name": "art-2020", "owner_name": "art2020"}
+    - slot{"owner_name": "art2020"}
+    - slot{"repo_name": "art-2020"}
+    - commit_by_branch_form
+    - form{"name": "commit_by_branch_form"}
+    - slot{"repo_name": "art-2020"}
+    - slot{"owner_name": "art2020"}
+    - slot{"repo_name": "art-2020"}
+    - slot{"owner_name": "art2020"}
+    - slot{"requested_slot": "branch_name"}
+* form: branch_name_entry{"branch_name": "master"}
+    - slot{"branch_name": "master"}
+    - form: commit_by_branch_form
+    - slot{"branch_name": "master"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_commit_by_branch
+* commit_by_branch{"search_key": "fetch me", "bitbucket_action": " commit", "repo_key": "repo", "owner_name": "art2020", "repo_name": "art-2020"}
+    - slot{"owner_name": "art2020"}
+    - slot{"repo_name": "art-2020"}
+
+## interactive_story_1
+* commit_by_user{"search_key": " search_key", "user_name": "prathamesh"}
+    - slot{"user_name": "prathamesh"}
+    - commit_by_user_form
+    - form{"name": "commit_by_user_form"}
+    - slot{"user_name": "prathamesh"}
+    - slot{"user_name": "prathamesh"}
+    - slot{"requested_slot": "repo_name"}
+* form: repo_name_entry{"repo_key": "repo", "repo_name": "art-2020"}
+    - slot{"repo_name": "art-2020"}
+    - form: commit_by_user_form
+    - slot{"repo_name": "art-2020"}
+    - slot{"requested_slot": "owner_name"}
+* form: owner_name_entry{"owner_name": "art2020"}
+    - slot{"owner_name": "art2020"}
+    - form: commit_by_user_form
+    - slot{"owner_name": "art2020"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_commit_by_user
+* commit_msg{"search_key": " search_key"}
+    - commit_msg_form
+    - form{"name": "commit_msg_form"}
+    - slot{"repo_name": "art-2020"}
+    - slot{"owner_name": "art2020"}
+    - slot{"requested_slot": "message"}
+* form: message_entry{"message": "transaction operation", "bitbucket_action": " commit"}
+    - slot{"message": "transaction operation"}
+    - form: commit_msg_form
+    - slot{"message": "transaction operation"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+    - utter_commitMsg

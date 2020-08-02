@@ -120,10 +120,9 @@ class ErrorSearchForm(FormAction):
         return ["error_query"]
     def submit(self,dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict]:
         dispatcher.utter_message(text="Parameters Submitted")
-        self.error_query = tracker.get_slot("error_query")
         obj = searchStack()
         returnVar = {}
-        returnVar['reply'] = obj.searchStack(self.error_query)
+        returnVar['reply'] = obj.searchStack(tracker.get_slot("error_query"))
         returnVar['status'] = 200
         returnVar['type'] = 'stackoverflow'
         returnVar = json.dumps(returnVar)

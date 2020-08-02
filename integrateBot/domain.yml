@@ -1,19 +1,36 @@
-
-forms:
-- commit_msg_form
-- error_search_form
-- repo_list_form
-- watcher_list_form
-- branch_list_form
-- commit_by_branch_form
-- commit_by_user_form  
+actions:
+- utter_afirm
+- utter_ask_branch_name
+- utter_ask_error_query
+- utter_ask_message
+- utter_ask_owner_name
+- utter_ask_repo_name
+- utter_branchList
+- utter_branch_type_entry
+- utter_commitMsg
+- utter_commit_by_branch
+- utter_commit_by_user
+- utter_create_space
+- utter_get_pages_in_a_space
+- utter_goodbye
+- utter_greet
+- utter_info_of_a_space
+- utter_info_of_all_spaces
+- utter_repoList
+- utter_searchErrors
+- utter_space_key_entry
+- utter_space_name_entry
+- utter_user_name_entry
+- utter_watcherList
 entities:
 - bitbucket_action
+- body
 - branch_name
 - branch_type
 - create_key
 - error_keys
 - error_query
+- file_name
 - key
 - message
 - owner_name
@@ -21,34 +38,40 @@ entities:
 - repo_name
 - search_key
 - space
-- user_name
-- body
 - title
-- file_name
+- user_name
+forms:
+- branch_list_form
+- commit_by_branch_form
+- commit_by_user_form
+- commit_msg_form
+- error_search_form
+- repo_list_form
+- watcher_list_form
 intents:
+- owner_name_entry
+- repo_name_entry
+- commit_by_user
+- commit_msg
+- message_entry
+- watcher_list
+- branch_name_entry
+- commit_by_branch
+- repo_list
 - create_space
 - info_of_a_space
-- commit_by_branch
 - get_pages_in_a_space
-- commit_by_user
 - info_of_all_spaces
-- repo_name_entry
-- commit_msg
-- watcher_list
 - greet
 - goodbye
 - affirm
 - deny
-- message_entry
-- owner_name_entry
 - space_name_entry
 - space_key_entry
-- branch_name_entry
 - user_name_entry
 - branch_type_entry
 - error_search
 - error_query_entry
-- repo_list
 - branch_list
 - create_page
 - title_entry
@@ -58,10 +81,18 @@ intents:
 responses:
   utter_afirm:
   - text: You just affirmed
+  utter_ask_branch_name:
+  - text: What is The branch name?
+  utter_ask_error_query:
+  - text: What is the error query
+  utter_ask_message:
+  - text: "{'reply':'What was the commit message','status':200}"
+  utter_ask_owner_name:
+  - text: Who is The owner
+  utter_ask_repo_name:
+  - text: what is the name of the repo
   utter_branchList:
   - text: 'List of all the branches on repo: {repo_name}'
-  utter_ask_branch_name:
-  - text: What is The branch name? 
   utter_branch_type_entry:
   - text: 'The branch type was stated to be : {branch_type}'
   utter_commitMsg:
@@ -72,8 +103,6 @@ responses:
   - text: 'You want to check for commit by user: {user_name}'
   utter_create_space:
   - text: 'you wish to create space with name: {space} key: {key}'
-  utter_ask_error_query:
-  - text: What is the error query
   utter_get_pages_in_a_space:
   - text: 'You want all pages in a space with name: {space}'
   utter_goodbye:
@@ -84,14 +113,8 @@ responses:
   - text: 'You want info of space with key: {key}'
   utter_info_of_all_spaces:
   - text: You want info of all spaces
-  utter_ask_message:
-  - text: What was the commit message
-  utter_ask_owner_name:
-  - text: Who is The owner
   utter_repoList:
   - text: List of all repos
-  utter_ask_repo_name:
-  - text: what is the name of the repo
   utter_searchErrors:
   - text: 'You want solution on issue: {error_query}'
   utter_space_key_entry:
@@ -99,13 +122,15 @@ responses:
   utter_space_name_entry:
   - text: 'space name was set: {space}'
   utter_user_name_entry:
-  - text: 'The user name is : {user_name}'
+  - text: '{"status":200,"reply":The user name is : {user_name}}'
   utter_watcherList:
   - text: You want to get the list of watchers on repo:{repo_name} owner:{owner_name}
 session_config:
-  carry_over_slots_to_new_session: true
+  carry_over_slots_to_new_session: false
   session_expiration_time: 60
 slots:
+  body:
+    type: text
   branch_name:
     type: unfeaturized
   branch_type:
@@ -120,6 +145,8 @@ slots:
     - __other__
   error_query:
     type: text
+  file_name:
+    type: unfeaturized
   key:
     type: text
   message:
@@ -128,16 +155,11 @@ slots:
     type: text
   repo_name:
     type: text
+  requested_slot:
+    type: unfeaturized
   space:
-    type: text
-  user_name:
-    type: text
-
-  body: 
     type: text
   title:
     type: text
-
-  file_name:
-    type: unfeaturized
-
+  user_name:
+    type: text

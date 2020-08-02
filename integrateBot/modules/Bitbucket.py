@@ -10,7 +10,7 @@ class bitbucketActions():
     ## getting list of repos
     def get_repos(self,owner_name):
         self.returnJson = {}
-        resp = requests.get(self.baseUrl+'repositories/'+str(owner_name))
+        resp = requests.get(self.baseUrl+'repositories/'+str(owner_name)+'/')
         # ,headers={'Authorization':'Bearer '+self.access_token})
         if resp.status_code == 200:
             out = resp.json()
@@ -26,7 +26,7 @@ class bitbucketActions():
     ## getting the list of branches on a repo
     def get_branches(self,repo_name,owner_name):
         self.returnJson = {}
-        resp = requests.get(self.baseUrl+'repositories/'+str(owner_name)+'/branches/')
+        resp = requests.get(self.baseUrl+'repositories/'+str(owner_name)+'/'+str(repo_name)+'/refs/branches/')
         # ,headers={'Authorization':'Bearer '+self.access_token})
         if resp.status_code == 200:
             out = resp.json()
@@ -58,7 +58,7 @@ class bitbucketActions():
     ## getting the latest commit info by a user
     def get_commit_by_user(self,repo_name,owner_name,user_name):
         self.returnJson = {}
-        resp = requests.get(self.baseUrl+'repositories/'+str(owner_name)+'/'+str(repo_name)+'/commits')
+        resp = requests.get(self.baseUrl+'repositories/'+str(owner_name)+'/'+str(repo_name)+'/commits/')
         # ,headers={'Authorization':'Bearer '+self.access_token})
         if resp.status_code == 200:
             out = resp.json()
@@ -86,7 +86,7 @@ class bitbucketActions():
     ## get the commit based on a specific message
     def get_commit_by_msg(self,repo_name,owner_name,msg):
         self.returnJson = {}
-        resp = requests.get(self.baseUrl+'repositories/'+str(owner_name)+'/'+str(repo_name)+'/commits')
+        resp = requests.get(self.baseUrl+'repositories/'+str(owner_name)+'/'+str(repo_name)+'/commits/')
         # ,headers={'Authorization':'Bearer '+self.access_token})
         if resp.status_code == 200:
             out = resp.json()
@@ -156,7 +156,7 @@ class bitbucketActions():
                 linkStr = ',\n '.join(lst)
                 returnVar.append('codeLinks: ' + linkStr)
             
-            self.returnJson['reply'] = returnVar
+            self.returnJson['reply'] = ', '.join(returnVar)
         else:
             
             self.returnJson['reply'] = resp.text

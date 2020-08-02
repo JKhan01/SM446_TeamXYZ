@@ -41,12 +41,14 @@
 - who did the commit for [text summarization](message)
 - [get me]{"entity": "search_key", "value": " search_key"} the commit for story ["text summarization"]{"entity": "message", "value": "text summarization"}
 - jarvis, [fetch me](search_key) the commit details with comment login [operation](message)
+- [get me]{"entity": "search_key", "value": " search_key"} the commit by message
 
 ## intent:message_entry
 - [text summarization](message)
 - the story for which the commit is [payment operation](message)
 - the comment for the commit should be [order operation](message).
 - the [transaction operation](message)
+- [transaction operation](message) was the message of the [commit]{"entity": "bitbucket_action", "value": " commit"}
 
 ## intent:commit_by_branch
 - hey Jarvis, [find me](search_key) the latest [commit](bitbucket_action)
@@ -65,12 +67,16 @@
 - hey jarvis, on [repository](repo_key) [robocon](repo_name) who made the last [commit](bitbucket_action)
 - [find]{"entity": "search_key", "value": " search_key"} the latest update on [repo](repo_key) [arcWork](repo_name)
 - [who](search_key) did the last [commit]{"entity": "bitbucket_action", "value": " commit"} on branch [master](branch_name)
+- who did the last [commit]{"entity": "bitbucket_action", "value": " commit"} on [repo](repo_key) [art-2020](owner_name) owned by [art2020](repo_name)
+- who did the last [commit]{"entity": "bitbucket_action", "value": " commit"} on [repo](repo_key) [art-2020](repo_name) owned by [art2020](owner_name)
+- [fetch me](search_key) the last [commit]{"entity": "bitbucket_action", "value": " commit"} from user paresh on [repo](repo_key) [art-2020](owner_name) owned by [art2020](repo_name)
 
 ## intent:commit_by_user
 - [find me](search_key) the last update from user [jamaluddin](user_name) on [repo](repo_key) [sectTest](repo_name)
 - hey jarvis, get the latest [commit](bitbucket_action) done by user [tanmay](user_name)
 - [find me](search_key) the last [update](bitbucket_action) from user [shritej](user_name) on [repo](repo_key)
 - [find me]{"entity": "search_key", "value": " search_key"} the commit from user [tanmay](user_name)
+- [get me]{"entity": "search_key", "value": " search_key"} the commit done by user [prathamesh](user_name)
 
 ## intent:branch_name_entry
 - [master](branch_name) is the branch name
@@ -78,6 +84,7 @@
 - [stable](branch_name) is the branch of type [bugfixes](branch_type)
 - [master](branch_name)
 - [version-2.x](branch_name) branch
+- the branch name is [master](branch_name)
 
 ## intent:user_name_entry
 - user name is [jamal](user_name)
@@ -104,26 +111,31 @@
 - [get all](search_key) the spaces from confluence
 
 ## intent:watcher_list
-- hey Jarvis, [get me](search_key) the list of watchers on repo [workingonatlassianapis]{"entity": "repo_name", "value": "wokringonatlassianapis"}
+- hey Jarvis, [get me](search_key) the list of watchers on repo [workingonatlassianapis](repo_name)
 - [who all](search_key) are the watchers on repo [test](repo_name)
 - [get me](search_key) the watchers.
 - list all the watchers.
 - jarvis, [get me]{"entity": "search_key", "value": " search_key"} the list of developers on [repository](repo_key)
-- [I want](search_key) to know [who all](search_key) are watchers on the [repository](repo_key) [atlassianWork](repo_name) under [art-2020](owner_name)
+- [I want](search_key) to know [who all](search_key) are watchers on the [repository](repo_key) [atlassianWork](repo_name) under [art2020](owner_name)
 - Good morning Jarvis, please [get me](search_key) the list of watchers on [test3](repo_name) repository
-- [I want](search_key) to know [who all](search_key) are watchers on the [repository](repo_key) [atlassianWork](repo_name) under project [art-2020](owner_name)
+- [I want](search_key) to know [who all](search_key) are watchers on the [repository](repo_key) [atlassianWork](repo_name) under project [art2020](owner_name)
 - [get me]{"entity": "search_key", "value": " search_key"} the list of watchers on [repo](repo_key) dev
 - [get me]{"entity": "search_key", "value": " search_key"} the list of watchers on [repo](repo_key) [art-2020](repo_name)
 - jarvis, list all the watchers on [repo](repo_key) [secTest](repo_name)
+- [get me]{"entity": "search_key", "value": " search_key"} the list of watchers
+- [get](search_key) the list of watchers on [repo](repo_key) [test](repo_name)
+- [get me]{"entity": "search_key", "value": " search_key"} the list of watchers on [repo](repo_key) [test](repo_name) owned by [jkhan01](owner_name)
+- [get me]{"entity": "search_key", "value": " search_key"} the list of watchers on [repo](repo_key) [art-2020](repo_name) owned by [art2020](owner_name)
 
 ## intent:repo_list
 - hey Jarvis, [get me](search_key) the list of [repository](repo_key).
 - [what are](search_key) the [repositories](repo_key) under [workspace jkhan01]{"entity": "owner_name", "value": "jkhan01"}?
-- find all the [repos](repo_key) with [owner art-2020]{"entity": "owner_name", "value": "art-2020"}
+- find all the [repos](repo_key) with [owner art2020]{"entity": "owner_name", "value": "art2020"}
 - list all [repo](repo_key) owned by [tanmaygujar](owner_name)
+- [get me]{"entity": "search_key", "value": " search_key"} the list of [repositories](repo_key)
 
 ## intent:branch_list
-- [get me](search_key) the branches on [repo workingonatlassianapis]{"entity": "repo_name", "value": "wokringonatlassianapis"}
+- [get me](search_key) the branches on [repo workingonatlassianapis]{"entity": "repo_name", "value": "workingonatlassianapis"}
 - hey Jarvis, [find the](search_key) branches under [repository test]{"entity": "repo_name", "value": "test"}
 - list all the branches.
 - [find the](search_key) name of branches of type [release](branch_type).
@@ -138,11 +150,15 @@
 - i am talking about [secTest](repo_name)
 - the name of the [repo](repo_key) is [sih2020](repo_name)
 - the name of [repo](repo_key) is [sih2020](repo_name)
+- [workingonatlassianapis](repo_name)
+- the [repo](repo_key) is [art-2020](repo_name)
 
 ## intent:owner_name_entry
 - the owner is [jkhan01](owner_name)
 - [deftNinja](owner_name) is the owner
 - the owner of the repo is [jhatya](owner_name)
+- [jkhan01](owner_name)
+- [art-202]{"entity": "owner_name", "value": "art2020"}0 is the owner
 
 ## intent:create_space
 - [create](create_key) space named [Demo](space)
@@ -244,7 +260,6 @@
 - [floating point error](error_query)
 - [no module name flask found](error_query)
 
-
 ## intent:create_page
 - [create](create_key) a new page with title [Sample](title) in the space [Chemistry](space) with the body ["Bro!! this is nothing new"](body)
 - [create](create_key) page named [Demo](title)
@@ -317,7 +332,6 @@
 - the page with id [3984322](page_id) is to be exported as a pdf file
 - the page with id [3984322](page_id) is to be exported as a pdf file titled [bro](file_name)
 
-
 ## intent:file_name_entry
 - the name of the pdf file is [tester](file_name)
 - [physics](file_name)
@@ -327,15 +341,16 @@
 - [Math](file_name) is the title of the pdf file
 - the pdf file's name is [physics](file_name)
 - [Chemistry](file_name)
+
 ## synonym: commit
 - commit
 - code
 
 ## synonym: create_key
+- create
 - construct
 - assemble
 - develop
-- create
 - make
 - generate
 
@@ -356,8 +371,11 @@
 
 ## synonym:art-2020
 - repo art-2020
-- owner art-2020
 - art-2020 repo
+- owner art-2020
+
+## synonym:art2020
+- owner art2020
 
 ## synonym:atlassian
 - atlassian project
@@ -381,6 +399,6 @@
 ## synonym:value not found error
 - value not found
 
-## synonym:wokringonatlassianapis
-- workingonatlassianapis
+## synonym:workingonatlassianapis
 - repo workingonatlassianapis
+- workingonatlassianapis

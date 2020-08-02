@@ -30,8 +30,7 @@ def process(userText):
         
         return (', '.join(returnList))
     else:
-        return (resp.text)
-
+        return json.dumps({'success':True}), 200, {'ContentType':'application/json'}
 
 if __name__ == '__main__':
 	app.run(debug=True)
