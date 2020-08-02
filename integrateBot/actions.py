@@ -117,10 +117,10 @@ class ErrorSearchForm(FormAction):
 
     @staticmethod
     def required_slots(tracker: Tracker) -> List[Text]:
-        return ["error_action"]
+        return ["error_query"]
     def submit(self,dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict]:
         dispatcher.utter_message(text="Parameters Submitted")
-        self.error_query = tracker.get_slot("error_action")
+        self.error_query = tracker.get_slot("error_query")
         obj = searchStack()
         returnVar = {}
         returnVar['reply'] = obj.searchStack(self.error_query)
