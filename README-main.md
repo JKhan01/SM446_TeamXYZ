@@ -55,6 +55,3 @@ The developed software is a Python-based web application(Flask) which acts as an
 
 ## License
 
-
-## Acknowledgments
-
