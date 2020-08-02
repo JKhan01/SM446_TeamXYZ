@@ -34,10 +34,11 @@ The developed software is a Python-based web application(Flask) which acts as an
   - [Confluence API](https://docs.atlassian.com/atlassian-confluence/REST/6.6.0/) - Used to access and execute tasks on the Confluence board.
 - [Gmail API](https://developers.google.com/gmail/api) - Used to access and send the company’s email.
 - [Mozilla DeepSpeech](https://deepspeech.readthedocs.io/en/v0.8.0/?badge=latest) - Used for speech recognition and speech to text.
-- [MongoDB](https://docs.mongodb.com/) - Used to store tacker conversations.
-- [Redis](https://redis.io/documentation) - Used for session management.
+- [MongoDB](https://docs.mongodb.com/) - Used to store chats and meetings.
+- [AWS S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html) - Used to store audio files of the meetings.
+- [Redis](https://redis.io/documentation) - Used for session management. 
 - [Celery](https://docs.celeryproject.org/en/stable/) - Used for task chaining and queue management.
-- [Rasa](https://rasa.com/) - A chatbot framework used to understand, interpret end-user queries and appropriately fetch response data over REST and scraping.
+- [Rasa](https://rasa.com/docs/) - A chatbot framework used to understand, interpret end-user queries and appropriately fetch response data over REST and scraping.
 - [Flask](https://flask.palletsprojects.com/en/1.1.x/) -  It is a python micro-framework which will be used to provide a web interface. 
 
 
