@@ -3,6 +3,15 @@ The developed software is a Python-based web application(Flask) which acts as an
 
 ### Technical Details 
 #### Abstract Architecture diagram of the project.
+##### Architecture diagram for chat:
+<div align="center">
+  <img src="https://github.com/JKhan01/SIH2020/blob/Pooja/IMG-20200802-WA0000.jpg"><br><br>
+</div>
+
+##### Architecture diagram for meeting:
+<div align="center">
+  <img src="https://github.com/JKhan01/SIH2020/blob/Pooja/IMG-20200802-WA0001.jpg"><br><br>
+</div>
 
 ## Getting Started
 
@@ -26,8 +35,8 @@ The developed software is a Python-based web application(Flask) which acts as an
 - [Gmail API](https://developers.google.com/gmail/api) - Used to access and send the company’s email.
 - [Mozilla DeepSpeech](https://deepspeech.readthedocs.io/en/v0.8.0/?badge=latest) - Used for speech recognition and speech to text.
 - [MongoDB](https://docs.mongodb.com/) - Used to store tacker conversations.
-- [Redis](https://redis.io/documentation) -
-- [Celery](https://docs.celeryproject.org/en/stable/) -
+- [Redis](https://redis.io/documentation) - 
+- [Celery](https://docs.celeryproject.org/en/stable/) - Used for task chaining and queue management.
 - [Rasa](https://rasa.com/docs/) - A chatbot framework used to understand, interpret end-user queries and appropriately fetch response data over REST and scraping.
 - [Flask](https://flask.palletsprojects.com/en/1.1.x/) -  It is a python micro-framework which will be used to provide a web interface. 
 
