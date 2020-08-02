@@ -52,7 +52,7 @@ const enterListener = function(e) {
                 res.data.forEach(printFunction);  
                 function printFunction(value,index,array)
                 {
-                    addBotMessage(value.text);    
+                    addBotMessage(value.reply);    
                 };
                 
             }).catch(function (err) {
