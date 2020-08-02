@@ -1,6 +1,6 @@
 
 const SOCKETIO_URL = 'http://localhost:4000';
-const CHAT_BASE_URL = '';
+const CHAT_BASE_URL = 'http://localhost:5000';
 const DOWNSAMPLING_WORKER = './downsampling_worker.js';
 const socket = io.connect(SOCKETIO_URL, {});
 
@@ -35,7 +35,7 @@ const addHumanMessage = function(message) {
 }
 
 const doTextRequest = function(message) {
-    return axios.post(`${CHAT_BASE_URL}/chat/${message}`, {
+    return axios.post(`${CHAT_BASE_URL}/chat`, {
         query: message
     });
 }
@@ -49,7 +49,12 @@ const enterListener = function(e) {
             doTextRequest(inputData.value)
             .then(function (res) {
                 console.log(res);
-                addBotMessage(res.text);
+                res.data.forEach(printFunction);  
+                function printFunction(value,index,array)
+                {
+                    addBotMessage(value.text);    
+                };
+                
             }).catch(function (err) {
                 console.error('Something went wrong');
                 console.error(err);
