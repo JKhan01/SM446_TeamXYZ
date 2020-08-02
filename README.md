@@ -37,7 +37,7 @@ The developed software is a Python-based web application(Flask) which acts as an
 - [MongoDB](https://docs.mongodb.com/) - Used to store tacker conversations.
 - [Redis](https://redis.io/documentation) - Used for session management.
 - [Celery](https://docs.celeryproject.org/en/stable/) - Used for task chaining and queue management.
-- [Rasa](https://rasa.com/docs/) - A chatbot framework used to understand, interpret end-user queries and appropriately fetch response data over REST and scraping.
+- [Rasa](https://rasa.com/) - A chatbot framework used to understand, interpret end-user queries and appropriately fetch response data over REST and scraping.
 - [Flask](https://flask.palletsprojects.com/en/1.1.x/) -  It is a python micro-framework which will be used to provide a web interface. 
 
 
@@ -54,5 +54,8 @@ The developed software is a Python-based web application(Flask) which acts as an
 * Dylan Dsouza
 
 ## License
-This project is licensed under the Apache-2.0 License - see the [LICENSE.txt](https://github.com/JKhan01/SM446_TeamXYZ/blob/master/LICENSE.txt) file for details
+This project is licensed under the Apache-2.0 License - see the [LICENSE.txt](https://github.com/JKhan01/SM446_TeamXYZ/blob/master/LICENSE.txt) file for details.
+
+## Acknowledgments
+* [Purplebooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
 
