@@ -54,4 +54,5 @@ The developed software is a Python-based web application(Flask) which acts as an
 * Dylan Dsouza
 
 ## License
+This project is licensed under the Apache-2.0 License - see the [License.txt](https://github.com/JKhan01/SM446_TeamXYZ/blob/master/License.txt) file for details
 
