@@ -1,0 +1,422 @@
+actions:
+- action_delete_page
+- action_get_page_info_by_id
+- action_get_pages_in_a_space
+- action_info_of_all_spaces
+- action_space_info
+- action_get_latest_email_from_label
+- action_get_latest_email_from_user
+- action_get_latest_email_in_inbox
+- utter_ask_body
+- utter_ask_file_name
+- utter_ask_key
+- utter_ask_page_id
+- utter_ask_space
+- utter_ask_title
+- utter_create_page_slot_values
+- utter_create_space_slot_values
+- utter_export_page_as_pdf_slot_values
+- utter_get_pages_in_a_space_slot_value
+- utter_pages_in_a_space_slot_value
+- utter_space_info_slot_value
+- utter_submit
+- utter_afirm
+- utter_ask_branch_name
+- utter_ask_error_query
+- utter_ask_message
+- utter_ask_owner_name
+- utter_ask_repo_name
+- utter_branchList
+- utter_branch_type_entry
+- utter_commitMsg
+- utter_commit_by_branch
+- utter_commit_by_user
+- utter_goodbye
+- utter_greet
+- utter_repoList
+- utter_searchErrors
+- utter_user_name_entry
+- utter_watcherList
+- utter_ask_epic_summary
+- utter_ask_group_name
+- utter_ask_issue_summary
+- utter_ask_issue_type
+- utter_ask_project_name
+- utter_ask_task_summary
+- utter_get_all_project_name_cred
+- utter_get_user_in_group_cred
+- utter_get_issue_in_project_cred
+- utter_get_issue_cred
+- utter_get_task_cred
+- utter_get_epic_cred
+- utter_get_status_of_issue_cred
+- utter_get_status_of_epic_cred
+- utter_get_status_of_task_cred
+- utter_get_issue_version_cred
+- utter_get_epic_version_cred
+- utter_get_task_version_cred
+- utter_get_comment_issue_cred
+- utter_get_comment_epic_cred
+- utter_get_comment_task_cred
+- utter_get_worklog_issue_cred
+- utter_get_worklog_task_cred
+- utter_get_worklog_epic_cred
+- utter_send_email_slot_values
+- utter_ask_query
+- utter_ask_email_body
+- utter_ask_receiver
+- utter_ask_subject
+- utter_choose_option
+- utter_choose_option_user
+- utter_email_id_format
+- utter_label_format
+- utter_ask_file_dir
+- utter_ask_filename
+
+entities:
+- bitbucket_action
+- body
+- branch_name
+- branch_type
+- create_key
+- error_keys
+- error_query
+- file_name
+- key
+- message
+- owner_name
+- repo_key
+- repo_name
+- search_key
+- space
+- title
+- user_name
+- page_id
+- epic_summary
+- greet
+- group_name
+- issue_summary
+- issue_type
+- project_name
+- search_keys
+- task_summary
+- query
+- email_body
+- receiver
+- subject
+- file_dir
+- filename
+forms:
+- branch_list_form
+- commit_by_branch_form
+- commit_by_user_form
+- commit_msg_form
+- error_search_form
+- repo_list_form
+- watcher_list_form
+- create_page_form
+- create_space_form
+- export_page_as_pdf_form
+- get_comment_epic_form
+- get_comment_issue_form
+- get_comment_task_form
+- get_epic_form
+- get_epic_version_form
+- get_issue_form
+- get_issue_in_project_form
+- get_issue_version_form
+- get_status_of_epic_form
+- get_status_of_issue_form
+- get_status_of_task_form
+- get_task_form
+- get_task_version_form
+- get_user_in_group_form
+- get_worklog_epic_form
+- get_worklog_issue_form
+- get_worklog_task_form
+- get_all_project_name_form
+- send_email_form
+- send_email_with_attachments_form 
+intents:
+- owner_name_entry
+- repo_name_entry
+- commit_by_user
+- commit_msg
+- message_entry
+- watcher_list
+- branch_name_entry
+- commit_by_branch
+- repo_list
+- create_space
+- info_of_a_space
+- get_pages_in_a_space
+- info_of_all_spaces
+- greet
+- goodbye
+- affirm
+- deny
+- space_name_entry
+- space_key_entry
+- user_name_entry
+- branch_type_entry
+- error_search
+- error_query_entry
+- branch_list
+- create_page
+- title_entry
+- body_entry
+- get_page_info_by_id
+- export_page_as_pdf
+- file_name_entry
+- get_status_of_issue
+- get_task
+- get_status_of_epic
+- project_entry
+- get_issue
+- get_issue_in_project
+- get_status_of_task
+- issue_summary_entry
+- epic_summary_entry
+- get_all_project_name
+- issue_type_entry
+- group_name_entry
+- get_issue_version
+- get_comments_in_issue​
+- get_worklog_in_issue
+- get_user_in_group
+- task_summary_entry
+- get_epic
+- get_task_version
+- get_epic_version
+- get_comments_in_task
+- get_comments_in_epic
+- get_worklog_in_epic
+- get_worklog_in_task
+- option_entry
+- query_entry
+- get_latest_email_from_user
+- get_latest_email_from_label
+- get_latest_email_in_inbox
+- send_email
+- send_email_with_attachments
+- email_body_entry
+- receiver_entry
+- subject_entry
+- file_dir_entry
+- filename_entry
+responses:
+  utter_afirm:
+  - text: You just affirmed
+  utter_ask_branch_name:
+  - text: What is The branch name?
+  utter_ask_error_query:
+  - text: What is the error query
+  utter_ask_message:
+  - text: "{'reply':'What was the commit message','status':200}"
+  utter_ask_owner_name:
+  - text: Who is The owner
+  utter_ask_repo_name:
+  - text: what is the name of the repo
+  utter_branchList:
+  - text: 'List of all the branches on repo: {repo_name}'
+  utter_branch_type_entry:
+  - text: 'The branch type was stated to be : {branch_type}'
+  utter_commitMsg:
+  - text: 'Commit check as per the message: {message}'
+  utter_commit_by_branch:
+  - text: 'you want to check commit on branch: {branch_name}'
+  utter_commit_by_user:
+  - text: 'You want to check for commit by user: {user_name}'
+  # utter_create_space:
+  # - text: 'you wish to create space with name: {space} key: {key}'
+  utter_get_pages_in_a_space_slot_value:
+  - text: 'You want all pages in a space with name: {space}'
+  utter_goodbye:
+  - text: Bye
+  utter_greet:
+  - text: Hey! How are you?
+  # utter_info_of_a_space:
+  # - text: 'You want info of space with key: {key}'
+  # utter_info_of_all_spaces:
+  # - text: You want info of all spaces
+  utter_repoList:
+  - text: List of all repos
+  utter_searchErrors:
+  - text: 'You want solution on issue: {error_query}'
+  utter_space_key_entry:
+  - text: 'space key was set: {key}'
+  utter_space_name_entry:
+  - text: 'space name was set: {space}'
+  utter_user_name_entry:
+  - text: '{"status":200,"reply":The user name is : {user_name}}'
+  utter_watcherList:
+  - text: You want to get the list of watchers on repo:{repo_name} owner:{owner_name}
+  utter_ask_body:
+  - text: Enter the body of the page to be created
+  utter_ask_file_name:
+  - text: Enter the name of the pdf file to be created
+  utter_ask_key:
+  - text: Enter the key of the space
+  utter_ask_page_id:
+  - text: Enter the id of page
+  utter_ask_space:
+  - text: Enter the name of the space
+  utter_ask_title:
+  - text: Enter the title of the page
+  # utter_check_page_exists_slot_values:
+  # - text: The page titled {title} has to be checked in the space {space}
+  utter_create_page_slot_values:
+  - text: "The page to be created has the following details:\n - space: {space}\n\
+      \ - title: {title}\n - body: {body}"
+  utter_create_space_slot_values:
+  - text: The name of the space to be created is {space} and the key is {key}
+  utter_export_page_as_pdf_slot_values:
+  - text: "The details about the page to be exported as pdf:\n - id : {page_id}\n\
+      \ - pdf file name : {file_name}"
+  # utter_get_page_id_slot_values:
+  # - text: Id has to be fetch of the page titled {title} present in the space {space}
+  # utter_get_page_info_by_title_slot_values:
+  # - text: The page whose info is to be fetched has title {title} and exists in the
+  #     space {space}
+  utter_pages_in_a_space_slot_value:
+  - text: The pages have to be retrieved from the space named {space}
+  utter_space_info_slot_value:
+  - text: The space whose details are to be fetched has the key {key}
+  utter_submit:
+  - text: Done
+  utter_ask_epic_summary:
+  - text: enter epic summary
+  utter_ask_group_name:
+  - text: enter group name
+  utter_ask_issue_summary:
+  - text: Provide a title
+  utter_ask_issue_type:
+  - text: what type of issue?
+  utter_ask_project_name:
+  - text: which project?
+  utter_ask_task_summary:
+  - text: enter task summary
+  utter_get_user_in_group_cred:
+  - text: 'you want user in group: {group_name}'  
+  utter_get_issue_in_project_cred:
+  - text: 'you want issue in project: {project_name}'  
+  utter_get_issue_cred:
+  - text: 'you want issue {issue_summary}'  
+  utter_get_task_cred:
+  - text: 'you want task {task_summary}'  
+  utter_get_epic_cred:
+  - text: 'you want epic: {epic_summary}'  
+  utter_get_status_of_issue_cred:
+  - text: 'you want status of issue: {issue_summary}'  
+  utter_get_status_of_epic_cred:
+  - text: 'you want status of epic: {epic_summary}'  
+  utter_get_status_of_task_cred:
+  - text: 'you want status of task: {task_summary}'
+  utter_get_issue_version_cred:
+  - text: 'you want version of issue: {issue_summary}'
+  utter_get_epic_version_cred:
+  - text: 'you want version of epic: {epic_summary}'
+  utter_get_task_version_cred:
+  - text: 'you want version of task: {task_summary}'
+  utter_get_comment_issue_cred:
+  - text: 'you want comment of issue: {issue_summary}'
+  utter_get_comment_epic_cred:
+  - text: 'you want comment of epic: {epic_summary}'
+  utter_get_comment_task_cred:
+  - text: 'you want comment of task: {task_summary}'  
+  utter_get_worklog_issue_cred:
+  - text: 'you want worklog of issue: {issue_summary}'  
+  utter_get_worklog_task_cred:
+  - text: 'you want worklog of task: {task_summary}' 
+  utter_get_worklog_epic_cred:
+  - text: 'you want worklog of epic: {epic_summary}'
+  utter_get_all_project_name_cred:
+  - text: ' you want all project names' 
+  utter_ask_query:
+  - text: Please enter the query
+  utter_ask_email_body:
+  - text: Enter the body of the email
+  utter_ask_receiver:
+  - text: Enter the receiver's email address
+  utter_ask_subject:
+  - text: Enter the subject of the email      
+  utter_choose_option:
+  - text: "What information do you want to retrieve : \n 1. Entire Info\n 2. Body\
+      \ snippet\n 3. Subject\n 4. Entire Body\n 5. Sender\n 6. Receiver"
+  utter_choose_option_user:
+  - text: "What information do you want to retrieve : \n 1. Entire Info\n 2. Body\
+      \ snippet\n 3. Subject\n 4. Entire Body"
+  utter_email_id_format:
+  - text: "For retrieving emails from a specific user, give query as 'from: sample@gmail.com'"
+  utter_send_email_slot_values:
+  - text: "The email has to be sent to the email address : {receiver} with the subject : {subject}"  
+  utter_label_format:
+  - text: For retrieving emails from a label, give query as 'label_name'
+  utter_ask_file_dir:
+  - text: Enter the directory in which the file is present (Eg. ./Directory)
+  utter_ask_filename:
+  - text: Enter the name of the file, with extension (Eg. abc.pdf)   
+
+
+session_config:
+  carry_over_slots_to_new_session: false
+  session_expiration_time: 60
+slots:
+  body:
+    type: text
+  branch_name:
+    type: unfeaturized
+  branch_type:
+    initial_value: other
+    type: categorical
+    values:
+    - release
+    - bugfixes
+    - other
+    - feature
+    - hotfix
+    - __other__
+  error_query:
+    type: text
+  file_name:
+    type: unfeaturized
+  key:
+    type: text
+  message:
+    type: text
+  owner_name:
+    type: text
+  repo_name:
+    type: text
+  requested_slot:
+    type: unfeaturized
+  space:
+    type: text
+  title:
+    type: text
+  user_name:
+    type: text
+  epic_summary:
+    type: text
+  group_name:
+    type: text
+  issue_summary:
+    type: text
+  issue_type:
+    type: text
+  project_name:
+    type: text
+  task_summary:
+    type: text
+  query:
+    type: unfeaturized
+  email_body:
+    type: unfeaturized
+  receiver:
+    type: unfeaturized
+  subject:
+    type: unfeaturized
+  file_dir:
+    type: unfeaturized
+  filename:
+    type: unfeaturized      
