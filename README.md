@@ -5,7 +5,7 @@ The developed software is a Python-based web application(Flask) which acts as an
 #### Abstract Architecture diagram of the project.
 ##### Architecture diagram for chat:
 <div align="center">
-  <img src="https://github.com/DeftNinja/SIH2020/blob/master/IMG-20200803-WA0007.jpg"><br><br>
+  <img src="https://github.com/JKhan01/SM446_TeamXYZ/blob/master/IMG-20200803-WA0007.jpg"><br><br>
 </div>
 
 
