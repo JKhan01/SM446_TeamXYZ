@@ -16,6 +16,9 @@ from modules.Bitbucket import bitbucketActions
 from modules.ErrorSearch import searchStack
 import json
 from functions import *
+from jira_package import *
+from g5 import *
+from g6 import *
 
 obj = bitbucketActions()
 
@@ -415,4 +418,502 @@ class ExportPageAsPdf(FormAction):
 
         run(self, CollectingDispatcher, Tracker, Dict[Text, Any])
         dispatcher.utter_message(text="Page Exported")
-        return []                                        
+        return []
+
+
+class GetUserAllProject(FormAction):
+
+    def name(self) -> Text:
+        return "get_all_project_name_form"
+    ## return the same form name
+    
+    @staticmethod
+    def required_slots(tracker: Tracker) -> List[Text]:
+        return []
+
+    def submit(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict]:
+        dispatcher.utter_message(text="Parameters Submitted")
+        ret_data = get_all_project_name()
+        txt = json.dumps(ret_data)
+        dispatcher.utter_message(text=txt)
+        return []
+
+
+class GetUserInGroup(FormAction):
+
+    def name(self) -> Text:
+        return "get_user_in_group_form"
+    ## return the same form name
+    
+    @staticmethod
+    def required_slots(tracker: Tracker) -> List[Text]:
+        return ['group_name']
+
+    def submit(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict]:
+        dispatcher.utter_message(text="Parameters Submitted")
+        ret_data = get_users_in_group(tracker.get_slot('group_name'))
+        txt = json.dumps(ret_data)
+        dispatcher.utter_message(text=txt)
+        return []
+
+class GetIssueProject(FormAction):
+
+    def name(self) -> Text:
+        return "get_issue_in_project_form"
+    ## return the same form name
+    
+    @staticmethod
+    def required_slots(tracker: Tracker) -> List[Text]:
+        return ['project_name']
+
+    def submit(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict]:
+        dispatcher.utter_message(text="Parameters Submitted")
+        ret_data = get_issues_in_project(tracker.get_slot('project_name'))
+        txt = json.dumps(ret_data)
+        dispatcher.utter_message(text=txt)
+        return []
+        
+
+class GetIssue(FormAction):
+
+    def name(self) -> Text:
+        return "get_issue_form"
+    ## return the same form name
+    
+    @staticmethod
+    def required_slots(tracker: Tracker) -> List[Text]:
+        return ['issue_summary']
+    
+    
+    def submit(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict]:
+        dispatcher.utter_message(text="Parameters Submitted")
+        ret_data = get_issue(tracker.get_slot('issue_summary'))
+        txt = json.dumps(ret_data)
+        dispatcher.utter_message(text=txt)
+        return []
+
+class GetEpic(FormAction):
+
+    def name(self) -> Text:
+        return "get_epic_form"
+    ## return the same form name
+    
+    @staticmethod
+    def required_slots(tracker: Tracker) -> List[Text]:
+        return ['epic_summary']
+    
+    
+    def submit(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict]:
+        dispatcher.utter_message(text="Parameters Submitted")
+        ret_data = get_issue(tracker.get_slot('epic_summary'))
+        txt = json.dumps(ret_data)
+        dispatcher.utter_message(text=txt)
+        return []
+
+class GetTask(FormAction):
+
+    def name(self) -> Text:
+        return "get_task_form"
+    ## return the same form name
+    
+    @staticmethod
+    def required_slots(tracker: Tracker) -> List[Text]:
+        return ['task_summary']
+    
+    
+    def submit(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict]:
+        dispatcher.utter_message(text="Parameters Submitted")
+        ret_data = get_issue(tracker.get_slot('task_summary'))
+        txt = json.dumps(ret_data)
+        dispatcher.utter_message(text=txt)
+        return []
+
+class GetStatusOfIssue(FormAction):
+
+    def name(self) -> Text:
+        return "get_status_of_issue_form"
+    ## return the same form name
+    
+    @staticmethod
+    def required_slots(tracker: Tracker) -> List[Text]:
+        return ['issue_summary']
+    
+    
+    def submit(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict]:
+        dispatcher.utter_message(text="Parameters Submitted")
+        ret_data = get_status_of_issue(tracker.get_slot('issue_summary'))
+        txt = json.dumps(ret_data)
+        dispatcher.utter_message(text=txt)
+        return []
+
+class GetStatusOfEpic(FormAction):
+
+    def name(self) -> Text:
+        return "get_status_of_epic_form"
+    ## return the same form name
+    
+    @staticmethod
+    def required_slots(tracker: Tracker) -> List[Text]:
+        return ['epic_summary']
+    
+    
+    def submit(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict]:
+        dispatcher.utter_message(text="Parameters Submitted")
+        ret_data = get_status_of_issue(tracker.get_slot('epic_summary'))
+        txt = json.dumps(ret_data)
+        dispatcher.utter_message(text=txt)
+        return []
+
+class GetStatusOfTask(FormAction):
+
+    def name(self) -> Text:
+        return "get_status_of_task_form"
+    ## return the same form name
+    
+    @staticmethod
+    def required_slots(tracker: Tracker) -> List[Text]:
+        return ['task_summary']
+    
+    
+    def submit(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict]:
+        dispatcher.utter_message(text="Parameters Submitted")
+        ret_data = get_status_of_issue(tracker.get_slot('task_summary'))
+        txt = json.dumps(ret_data)
+        dispatcher.utter_message(text=txt)
+        return []
+
+class GetIssueVersion(FormAction):
+
+    def name(self) -> Text:
+        return "get_issue_version_form"
+    ## return the same form name
+    
+    @staticmethod
+    def required_slots(tracker: Tracker) -> List[Text]:
+        return ['issue_summary']
+    
+    
+    def submit(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict]:
+        dispatcher.utter_message(text="Parameters Submitted")
+        ret_data = get_issue_version(tracker.get_slot('issue_summary'))
+        txt = json.dumps(ret_data)
+        dispatcher.utter_message(text=txt)
+        return []
+
+class GetEpicVersion(FormAction):
+
+    def name(self) -> Text:
+        return "get_epic_version_form"
+    ## return the same form name
+    
+    @staticmethod
+    def required_slots(tracker: Tracker) -> List[Text]:
+        return ['epic_summary']
+    
+    
+    def submit(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict]:
+        dispatcher.utter_message(text="Parameters Submitted")
+        ret_data = get_issue_version(tracker.get_slot('epic_summary'))
+        txt = json.dumps(ret_data)
+        dispatcher.utter_message(text=txt)
+        return []
+
+class GetTaskVersion(FormAction):
+
+    def name(self) -> Text:
+        return "get_task_version_form"
+    ## return the same form name
+    
+    @staticmethod
+    def required_slots(tracker: Tracker) -> List[Text]:
+        return ['task_summary']
+    
+    
+    def submit(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict]:
+        dispatcher.utter_message(text="Parameters Submitted")
+        ret_data = get_issue_version(tracker.get_slot('task_summary'))
+        txt = json.dumps(ret_data)
+        dispatcher.utter_message(text=txt)
+        return []
+
+class GetCommentIssue(FormAction):
+
+    def name(self) -> Text:
+        return "get_comment_issue_form"
+    ## return the same form name
+    
+    @staticmethod
+    def required_slots(tracker: Tracker) -> List[Text]:
+        return ['issue_summary']
+    
+    
+    def submit(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict]:
+        dispatcher.utter_message(text="Parameters Submitted")
+        ret_data = get_comments_in_issue(tracker.get_slot('issue_summary'))
+        txt = json.dumps(ret_data)
+        dispatcher.utter_message(text=txt)
+        return []
+
+class GetCommentEpic(FormAction):
+
+    def name(self) -> Text:
+        return "get_comment_epic_form"
+    ## return the same form name
+    
+    @staticmethod
+    def required_slots(tracker: Tracker) -> List[Text]:
+        return ['epic_summary']
+    
+    
+    def submit(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict]:
+        dispatcher.utter_message(text="Parameters Submitted")
+        ret_data = get_comments_in_issue(tracker.get_slot('epic_summary'))
+        txt = json.dumps(ret_data)
+        dispatcher.utter_message(text=txt)
+        return []
+
+class GetCommentTask(FormAction):
+
+    def name(self) -> Text:
+        return "get_comment_task_form"
+    ## return the same form name
+    
+    @staticmethod
+    def required_slots(tracker: Tracker) -> List[Text]:
+        return ['task_summary']
+    
+    
+    def submit(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict]:
+        dispatcher.utter_message(text="Parameters Submitted")
+        ret_data = get_comments_in_issue(tracker.get_slot('task_summary'))
+        txt = json.dumps(ret_data)
+        dispatcher.utter_message(text=txt)
+        return []
+
+class GetWorklogIssue(FormAction):
+
+    def name(self) -> Text:
+        return "get_worklog_issue_form"
+    ## return the same form name
+    
+    @staticmethod
+    def required_slots(tracker: Tracker) -> List[Text]:
+        return ['issue_summary']
+    
+    
+    def submit(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict]:
+        dispatcher.utter_message(text="Parameters Submitted")
+        ret_data = get_worklog_in_issue(tracker.get_slot('issue_summary'))
+        txt = json.dumps(ret_data)
+        dispatcher.utter_message(text=txt)
+        return []
+
+class GetWorklogTask(FormAction):
+
+    def name(self) -> Text:
+        return "get_worklog_task_form"
+    ## return the same form name
+    
+    @staticmethod
+    def required_slots(tracker: Tracker) -> List[Text]:
+        return ['task_summary']
+    
+    
+    def submit(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict]:
+        dispatcher.utter_message(text="Parameters Submitted")
+        ret_data = get_worklog_in_issue(tracker.get_slot('task_summary'))
+        txt = json.dumps(ret_data)
+        dispatcher.utter_message(text=txt)
+        return []
+
+class GetWorklogEpic(FormAction):
+
+    def name(self) -> Text:
+        return "get_worklog_epic_form"
+    ## return the same form name
+    
+    @staticmethod
+    def required_slots(tracker: Tracker) -> List[Text]:
+        return ['epic_summary']
+    
+    
+    def submit(self, dispatcher: CollectingDispatcher,tracker: Tracker,domain: Dict[Text, Any]) -> List[Dict]:
+        dispatcher.utter_message(text="Parameters Submitted")
+        ret_data = get_worklog_in_issue(tracker.get_slot('epic_summary'))
+        txt = json.dumps(ret_data)
+        dispatcher.utter_message(text=txt)
+        return []
+
+
+class GetLatestInboxEmail(Action):
+
+    def name(self) -> Text:
+        return "action_get_latest_email_in_inbox"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        op = int(tracker.latest_message.get('text'))
+        t = LatestMailInInbox(op)
+        # tx = json.dumps(t, indent = 4)
+        # txt = json.loads(tx)
+        # txtt = json.dumps(txt, indent = 2)
+        
+        dispatcher.utter_message(text=t)
+
+        return []
+
+
+class GetLatestUserEmail(Action):
+
+    def name(self) -> Text:
+        return "action_get_latest_email_from_user"
+
+    # @staticmethod
+    # def required_slots(tracker: Tracker) -> List[Text]:
+    #     """ The required entries for this function """
+
+    #     print("required_slots(tracker : Tracker)")
+    #     return ["query"]
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        q = str(tracker.get_slot("query"))
+        op = int(tracker.latest_message.get('text'))
+        t = GetLatestMailFromUser(q, op)
+        #tx = json.dumps(t, indent = 4)
+        # txt = json.loads(tx)
+        # txtt = json.dumps(txt, indent = 2)
+        
+        dispatcher.utter_message(text=t)
+
+        return []        
+
+
+
+class GetLatestLabelEmail(Action):
+
+    def name(self) -> Text:
+        return "action_get_latest_email_from_label"
+
+    # @staticmethod
+    # def required_slots(tracker: Tracker) -> List[Text]:
+    #     """ The required entries for this function """
+
+    #     print("required_slots(tracker : Tracker)")
+    #     return ["query"]
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        q = str(tracker.get_slot("query"))
+        op = int(tracker.latest_message.get('text'))
+        t = GetLatestMailFromLabel(q, op)
+        #tx = json.dumps(t, indent = 4)
+        # txt = json.loads(tx)
+        # txtt = json.dumps(txt, indent = 2)
+        
+        dispatcher.utter_message(text=t)
+
+        return [] 
+
+
+class SendEmail(FormAction):
+
+    def name(self) -> Text:
+        return "send_email_form"
+
+    def slot_mappings(self):
+        # type: () -> Dict[Text: Union[Dict, List[Dict]]]
+
+        return {"email_body": [self.from_entity(entity="email_body"),
+                            self.from_text()],
+                "receiver": [self.from_entity(entity="receiver"),
+                            self.from_text()],
+                "subject": [self.from_entity(entity="subject"),
+                            self.from_text()]}
+
+    @staticmethod
+    def required_slots(tracker: Tracker) -> List[Text]:
+        """ The required entries for this function """
+
+        print("required_slots(tracker : Tracker)")
+        return ["receiver", "subject", "email_body"]
+
+
+    def submit(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict]:
+
+        a = str(tracker.get_slot("email_body"))
+        b = str(tracker.get_slot("receiver"))
+        c = str(tracker.get_slot("subject"))
+
+        def run(self, dispatcher: CollectingDispatcher,
+                tracker: Tracker,
+                domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+            SendMail(a, b, c)
+            
+            return []
+
+        run(self, CollectingDispatcher, Tracker, Dict[Text, Any])
+        dispatcher.utter_message(text="Email Sent")
+
+        return []
+
+
+class SendEmailWithAttachments(FormAction):
+
+    def name(self) -> Text:
+        return "send_email_with_attachments_form"
+
+    def slot_mappings(self):
+        # type: () -> Dict[Text: Union[Dict, List[Dict]]]
+
+        return {"email_body": [self.from_entity(entity="email_body"),
+                            self.from_text()],
+                "receiver": [self.from_entity(entity="receiver"),
+                            self.from_text()],
+                "subject": [self.from_entity(entity="subject"),
+                            self.from_text()],
+                "file_dir": [self.from_entity(entity="file_dir"),
+                            self.from_text()],
+                "filename": [self.from_entity(entity="filename"),
+                            self.from_text()]}
+
+    @staticmethod
+    def required_slots(tracker: Tracker) -> List[Text]:
+        """ The required entries for this function """
+
+        print("required_slots(tracker : Tracker)")
+        return ["receiver", "subject", "email_body", "file_dir", "filename"]
+
+
+    def submit(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict]:
+
+        a = str(tracker.get_slot("email_body"))
+        b = str(tracker.get_slot("receiver"))
+        c = str(tracker.get_slot("subject"))
+        d = str(tracker.get_slot("file_dir"))
+        e = str(tracker.get_slot("filename"))
+
+
+        def run(self, dispatcher: CollectingDispatcher,
+                tracker: Tracker,
+                domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+            SendMailWithAttachments(a, b, c, d, e)
+            
+            return []
+
+        run(self, CollectingDispatcher, Tracker, Dict[Text, Any])
+        dispatcher.utter_message(text="Email Sent")
+
+        return []        

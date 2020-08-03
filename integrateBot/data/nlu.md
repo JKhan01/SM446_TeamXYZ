@@ -354,6 +354,393 @@
 - the pdf file's name is [physics](file_name)
 - [Chemistry](file_name)
 
+
+## intent:issue_type_entry
+- [epic]{"entity": "issue_type", "value": "Epic"}
+- create [story]{"entity": "issue_type", "value": "Story"}
+- I want [task]{"entity": "issue_type", "value": "Task"}
+- [subtask]{"entity": "issue_type", "value": "Subtask"}
+- [bug]{"entity": "issue_type", "value": "Bug"}
+
+
+## intent:epic_summary_entry
+- [epic]{"entity": "issue_type", "value": "Epic"} summary is [text summarization](epic_summary)
+- the [epic]{"entity": "issue_type", "value": "Epic"} summary is [browse](epic_summary)
+- [corporate voice assistant](issue_summary) is summary for [epic]{"entity": "issue_type", "value": "Epic"}
+- [epic]{"entity": "issue_type", "value": "Epic"} summary is [skill extraction from resume](epic_summary)
+- summary is [text extraction](epic_summary)
+
+## intent:task_summary_entry
+- [task]{"entity": "issue_type", "value": "Task"} summary is [create registration page](task_summary)
+- [task]{"entity": "issue_type", "value": "Task"} summary is [develop add and remove from cart feature](task_summary)
+- [task]{"entity": "issue_type", "value": "Task"} is [support tool](task_summary)
+- [corporate voice assistant](task_summary) is summary for [task]{"entity": "issue_type", "value": "Task"}
+
+## intent:issue_summary_entry
+- [story]{"entity": "issue_type", "value": "Story"} summary is [text summarization](issue_summary)
+- the [bug]{"entity": "issue_type", "value": "Bug"} summary is [browse](issue_summary)
+- the [story]{"entity": "issue_type", "value": "Story"} name is [order operation](issue_summary)
+- [subtask]{"entity": "issue_type", "value": "Subtask"} summary is [payment operation](issue_summary)
+- summary of [subtask]{"entity": "issue_type", "value": "Subtask"} [track](issue_summary)
+- the [story]{"entity": "issue_type", "value": "Story"} summary is [text extraction](issue_summary)
+- [story]{"entity": "issue_type", "value": "Story"} summary is [make login page](issue_summary)
+- [bug]{"entity": "issue_type", "value": "Bug"} summary is [cash payment function](issue_summary)
+- summary of [bug]{"entity": "issue_type", "value": "Bug"} is [debit/credit card payment feature](issue_summary)
+- summary of [story]{"entity": "issue_type", "value": "Story"} is [ETA support](issue_summary)
+- [subtask]{"entity": "issue_type", "value": "Subtask"} is [duplicate previous order](issue_summary)
+- [subtask]{"entity": "issue_type", "value": "Subtask"} is [database formation](issue_summary)
+- [wrong credentials](issue_summary) bug
+- for [bug]{"entity": "issue_type", "value": "Bug"} set summary as [text summarization using nlp](issue_summary)
+- [payment functionality for flipkart](issue_summary) is summary of [bug]{"entity": "issue_type", "value": "Bug"}
+- [create](create) [story]{"entity": "issue_type", "value": "Story"} with summary [feature extraction](issue_summary)
+- [login error](issue_summary)
+
+
+## intent:project_entry
+- [project Resume Screening](project_name)
+- project is [project automated surveying](project_name)
+- The name of the project is [corporate jarvis](project_name)
+- project is [Resume screening](project_name)
+- [Online shopping system](project_name) project
+- [voice assistant](project_name) is project name
+- project name is [Resume screening](project_name)
+- project name is [resume screening](project_name)
+- [resume screening](project_name)
+- [resume screening](project_name) is project name
+
+
+## intent:get_all_project_name
+- [hey jarvis](greet) [fetch](search_keys) all projects
+- [hi](greet) [fetch](search_keys) all projects
+- [hello](greet) can you [get](search_keys) project names
+- [hey](greet) [what](search_keys) are the projects
+- [list](search_keys) project names
+- [fetch](search_keys) all projects
+
+
+## intent:group_name_entry
+- group name is [designers](group_name)
+- group is [administrators](group_name)
+- name is [creative](group_name)
+- [manager](group_name) group
+
+
+
+## intent:get_user_in_group
+- [find](search_keys) users in group [designers](group_name)
+- [find](search_keys) users in [administrators](group_name)
+- [list](search_keys) users in [developers](group_name)
+- [list](search_keys) users in [creative](group_name) group
+- [who](search_keys) are in [managers](group_name) group
+- [who](search_keys) are in [creative](group_name)
+- [get](search_keys) users in [manager](group_name)
+- [get](search_keys) user in group [administrator](group_name)
+
+## intent:get_issue_in_project
+- [find](search_keys) all issues in project [resume screening](project_name)
+- [get](search_keys) issues in [corporate jarvis](project_name) project
+- [list](search_keys) all issues in [bank management system](project_name)
+- [what](search_keys) are issues in [hotel booking system](project_name)
+
+## intent:get_issue
+- [get](search_keys) [story]{"entity": "issue_type", "value": "Story"} [text summarization](issue_summary) details
+- [fetch](search_keys) [browse](issue_summary) [story]{"entity": "issue_type", "value": "Story"}
+- [find](search_keys) [story]{"entity": "issue_type", "value": "Story"} [system error](issue_summary) details
+- [get](search_keys) [bug]{"entity": "issue_type", "value": "Bug"} [text summarization](issue_summary) details
+- [fetch](search_keys) [browse](issue_summary) [bug]{"entity": "issue_type", "value": "Bug"}
+- [find](search_keys) [bug]{"entity": "issue_type", "value": "Bug"} [system error](issue_summary) details
+- [get](search_keys) [subtask]{"entity": "issue_type", "value": "Subtask"} [text summarization](issue_summary) details
+- [fetch](search_keys) [browse](issue_summary) [subtask]{"entity": "issue_type", "value": "Subtask"}
+- [find](search_keys) [subtask]{"entity": "issue_type", "value": "Subtask"} [system error](issue_summary) details
+- [fetch](search_keys) [text extraction](issue_summary) [story]{"entity": "issue_type", "value": "Story"}
+
+## intent:get_epic
+- [get](search_keys) [epic]{"entity": "issue_type", "value": "Epic"} [text summarization](epic_summary) details
+- [fetch](search_keys) [browse](epic_summary) [epic]{"entity": "issue_type", "value": "Epic"}
+- [find](search_keys) [epic]{"entity": "issue_type", "value": "Epic"} [system error](epic_summary) details
+
+## intent:get_task
+- [get](search_keys) [task]{"entity": "issue_type", "value": "Task"} [text summarization](task_summary) details
+- [fetch](search_keys) [browse](task_summary) [task]{"entity": "issue_type", "value": "Task"}
+- [find](search_keys) [task]{"entity": "issue_type", "value": "Task"} [system error](task_summary) details
+- [get](search_keys) [task]{"entity": "issue_type", "value": "Task"} [browse](task_summary)
+- [fetch](search_keys) [task]{"entity": "issue_type", "value": "Task"} [browse](task_summary)
+
+## intent:get_status_of_issue
+- [get](search_keys) status of [story]{"entity": "issue_type", "value": "Story"} [text summarization](issue_summary)
+- [what](search_keys) is status of [browse](issue_summary) [story]{"entity": "issue_type", "value": "Story"}
+- [find](search_keys) status for [story]{"entity": "issue_type", "value": "Story"} [system error](issue_summary)
+- [fetch](search_keys) status of [system error](issue_summary) [story]{"entity": "issue_type", "value": "Story"}
+- [get](search_keys) status of [bug]{"entity": "issue_type", "value": "Bug"} [text summarization](issue_summary)
+- [what](search_keys) is status of [browse](issue_summary) [bug]{"entity": "issue_type", "value": "Bug"}
+- [find](search_keys) status for [bug]{"entity": "issue_type", "value": "Bug"} [system error](issue_summary)
+- [fetch](search_keys) status of [system error](issue_summary) [bug]{"entity": "issue_type", "value": "Bug"}
+- [get](search_keys) status of [subtask]{"entity": "issue_type", "value": "Subtask"} [text summarization](issue_summary)
+- [what](search_keys) is status of [browse](issue_summary) [subtask]{"entity": "issue_type", "value": "Subtask"}
+- [find](search_keys) status for [subtask]{"entity": "issue_type", "value": "Subtask"} [system error](issue_summary)
+- [fetch](search_keys) status of [system error](issue_summary) [subtask]{"entity": "issue_type", "value": "Subtask"}
+- [get](search_keys) status of [story]{"entity": "issue_type", "value": "Story"} [text extraction](issue_summary)
+
+## intent:get_status_of_task
+- [get](search_keys) status [task]{"entity": "issue_type", "value": "Task"} [text summarization](task_summary)
+- [what](search_keys) is status of [browse](task_summary) [task]{"entity": "issue_type", "value": "Task"}
+- [find](search_keys) status for [task]{"entity": "issue_type", "value": "Task"} [system error](task_summary)
+- [fetch](search_keys) status of [system error](task_summary) [task]{"entity": "issue_type", "value": "Task"}
+- [fetch](search_keys) status of [task]{"entity": "issue_type", "value": "Task"} [browse](task_summary)
+
+## intent:get_status_of_epic
+- [get](search_keys) status of [epic]{"entity": "issue_type", "value": "Epic"} [text summarization](epic_summary)
+- [what](search_keys) is status of [browse](epic_summary) [epic]{"entity": "issue_type", "value": "Epic"}
+- [find](search_keys) status for [epic]{"entity": "issue_type", "value": "Epic"} [system error](epic_summary)
+- [fetch](search_keys) status of [system error](epic_summary) [epic]{"entity": "issue_type", "value": "Epic"}
+- [fetch](search_keys) status of [epic]{"entity": "issue_type", "value": "Epic"} [browse](epic_summary)
+
+## intent:get_issue_version
+- [get](search_keys) version of [story]{"entity": "issue_type", "value": "Story"} [text summarization](issue_summary)
+- [what](search_keys) is release of [browse](issue_summary) [story]{"entity": "issue_type", "value": "Story"}
+- [find](search_keys) release date of [system error](issue_summary) [story]{"entity": "issue_type", "value": "Story"}
+- [fetch](search_keys) version details of [system error](issue_summary) [story]{"entity": "issue_type", "value": "Story"}
+- [get](search_keys) version of [bug]{"entity": "issue_type", "value": "Bug"} [text summarization](issue_summary)
+- [what](search_keys) is release of [browse](issue_summary) [bug]{"entity": "issue_type", "value": "Bug"}
+- [find](search_keys) release date of [system error](issue_summary) [bug]{"entity": "issue_type", "value": "Bug"}
+- [fetch](search_keys) version details of [system error](issue_summary) [bug]{"entity": "issue_type", "value": "Bug"}
+- [get](search_keys) version of [subtask]{"entity": "issue_type", "value": "Subtask"} [text summarization](issue_summary)
+- [what](search_keys) is release of [browse](issue_summary) [subtask]{"entity": "issue_type", "value": "Subtask"}
+- [find](search_keys) release date of [subtask]{"entity": "issue_type", "value": "Subtask"} [system error](issue_summary)
+- [fetch](search_keys) version details of [system error](issue_summary) [subtask]{"entity": "issue_type", "value": "Subtask"}
+
+## intent:get_task_version
+- [get](search_keys) version of [task]{"entity": "issue_type", "value": "Task"} [text summarization](task_summary)
+- [what](search_keys) is release of [browse](task_summary) [task]{"entity": "issue_type", "value": "Task"}
+- [find](search_keys) release date of [system error](task_summary) [task]{"entity": "issue_type", "value": "Task"}
+- [fetch](search_keys) version details of [system error](task_summary) [task]{"entity": "issue_type", "value": "Task"}
+
+## intent:get_epic_version
+- [get](search_keys) version of [epic]{"entity": "issue_type", "value": "Epic"} [text summarization](epic_summary)
+- [what](search_keys) is release of [browse](epic_summary) [epic]{"entity": "issue_type", "value": "Epic"}
+- [find](search_keys) release date of [system error](epic_summary) [epic]{"entity": "issue_type", "value": "Epic"}
+- [fetch](search_keys) version details of [system error](epic_summary) [epic]{"entity": "issue_type", "value": "Epic"}
+
+
+
+## intent:get_comments_in_issue​
+- [hi](greet) [get](search_keys) all comments on [story]{"entity": "issue_type", "value": "Story"} [system error](issue_summary)
+- [fetch](search_keys) me all comment on [browse](issue_summary) [story]{"entity": "issue_type", "value": "Story"}
+- [find](search_keys) all comment for [story]{"entity": "issue_type", "value": "Story"} [text summarization](issue_summary)
+- [hi](greet) [get](search_keys) all comments on [bug]{"entity": "issue_type", "value": "Bug"} [system error](issue_summary)
+- [fetch](search_keys) me all comment on [browse](issue_summary) [bug]{"entity": "issue_type", "value": "Bug"}
+- [find](search_keys) all comment from [bug]{"entity": "issue_type", "value": "Bug"} [text summarization](issue_summary)
+- [hi](greet) [get](search_keys) all comments on [subtask]{"entity": "issue_type", "value": "Subtask"} [system error](issue_summary)
+- [fetch](search_keys) me all comment on [browse](issue_summary) [subtask]{"entity": "issue_type", "value": "Subtask"}
+- [find](search_keys) all comment for [subtask]{"entity": "issue_type", "value": "Subtask"} [text summarization](issue_summary)
+
+## intent:get_comments_in_task
+- [hi](greet) [get](search_keys) all comments on [task]{"entity": "issue_type", "value": "Task"} [system error](task_summary)
+- [fetch](search_keys) me all comment on [browse](task_summary) [task]{"entity": "issue_type", "value": "Task"}
+- [find](search_keys) all comment for [task]{"entity": "issue_type", "value": "Task"} [text summarization](task_summary)
+
+## intent:get_comments_in_epic
+- [hi](greet) [get](search_keys) all comments on [epic]{"entity": "issue_type", "value": "Epic"} [system error](epic_summary)
+- [fetch](search_keys) me all comment on [browse](epic_summary) [epic]{"entity": "issue_type", "value": "Epic"}
+- [find](search_keys) all comment for [epic]{"entity": "issue_type", "value": "Epic"} [text summarization](epic_summary)
+
+
+
+## intent:get_worklog_in_issue
+- [hi](greet) [get](search_keys) all worklogs from [story]{"entity": "issue_type", "value": "Story"} [system error](issue_summary)
+- [fetch](search_keys) worklogs in [browse](issue_summary) [story]{"entity": "issue_type", "value": "Story"}
+- [find](search_keys) all worklogs from [text summarization](issue_summary) [story]{"entity": "issue_type", "value": "Story"}
+- from [story]{"entity": "issue_type", "value": "Story"} [text summarization](issue_summary) [get](search_keys) all worklog
+- [hi](greet) [get](search_keys) all worklogs from [bug]{"entity": "issue_type", "value": "Bug"} [system error](issue_summary)
+- [fetch](search_keys) worklogs in [bug]{"entity": "issue_type", "value": "Bug"} [browse](issue_summary)
+- [find](search_keys) all worklogs from [text summarization](issue_summary
+- from [bug]{"entity": "issue_type", "value": "Bug"} [text summarization](issue_summary) [get](search_keys) all worklog
+- [hi](greet) [get](search_keys) all worklogs from [subtask]{"entity": "issue_type", "value": "Subtask"} [system error](issue_summary)
+- [fetch](search_keys) worklogs in [subtask]{"entity": "issue_type", "value": "Subtask"} [browse](issue_summary)
+- [find](search_keys) all worklogs from [text summarization](issue_summary) [subtask]{"entity": "issue_type", "value": "Subtask"}
+- from [subtask]{"entity": "issue_type", "value": "Subtask"} [text summarization](issue_summary) [get](search_keys) all worklog
+
+## intent:get_worklog_in_task
+- [hi](greet) [get](search_keys) all worklogs from [system error](task_summary) [task]{"entity": "issue_type", "value": "Task"}
+- [fetch](search_keys) worklogs in [task]{"entity": "issue_type", "value": "Task"} [browse](task_summary)
+- [find](search_keys) all worklogs from [task]{"entity": "issue_type", "value": "Task"} [text summarization](task_summary)
+- from [task]{"entity": "issue_type", "value": "Task"} [text summarization](task_summary) [get](search_keys) all worklog
+
+## intent:get_worklog_in_epic
+- [hi](greet) [get](search_keys) all worklogs from [system error](epic_summary) [epic]{"entity": "issue_type", "value": "Epic"}
+- [fetch](search_keys) worklogs in [epic]{"entity": "issue_type", "value": "Epic"} [browse](epic_summary)
+- [find](search_keys) all worklogs from [epic]{"entity": "issue_type", "value": "Epic"} [text summarization](epic_summary)
+- from [text summarization](epic_summary) [epic]{"entity": "issue_type", "value": "Epic"} [get](search_keys) all worklog
+
+## intent:visible_to_role_entry
+- visible to [administrators](visible_to_role)
+- [developers](visible_to_role) can see
+- visible to all [managers](visible_to_role)
+
+## intent:get_latest_email_in_inbox
+- get the latest mail present in the inbox
+- retrieve the last mail i have received
+- fetch the latest mail that was sent to me
+- fetch the most recent email that i have received
+- i want you to get the latest email present from the inbox
+- jarvis i would appreciate if you could fetch the latest email present in the inbox
+- jarvis fetch me the last email i have received
+
+## intent:get_latest_email_from_user
+- get the latest mail from a specific user
+- get the latest email sent by a specific user
+- retrieve the last mail i have received from the user which i will mention
+- fetch the latest mail that was sent to me by a specific person
+- fetch the most recent email that i have received from the person that i am going to specify
+- i want you to get the latest email present from the inbox that was sent to me by the specific user
+- jarvis i would appreciate if you could fetch the latest email present in the inbox which was sent to me by a specific user
+- jarvis fetch me the last email i have received from the user that i am gonna specify
+- get the latest email from a specific user
+- get the latest mail from the specific user
+
+## intent:option_entry
+- 1
+- 3
+- 6
+- 5
+- 2
+- 4
+
+## intent:get_latest_email_from_label
+- get the latest mail from a specific label
+- get the latest email sent by a specific label
+- retrieve the last mail i have received from the label which i will mention
+- fetch the latest mail that was sent to me with a specific label
+- fetch the most recent email that i have received with the label that i am going to specify
+- i want you to get the latest email present from the inbox that was sent to me with the specific label
+- jarvis i would appreciate if you could fetch the latest email present in the inbox which was sent to me with a specific label
+- jarvis fetch me the last email i have received with the label that i am gonna specify
+- get the latest email with a specific label
+- get the latest email with the specified label
+
+## intent:query_entry
+- the query is [from: sample@gmail.com](query)
+- [from: abc@gmail.com](query)
+- query is [from: efg@gmail.com](query)
+- [from: ab234@gmail.com](query)
+- [from: random123@gmail.com](query)
+- [Testing](query)
+- [Random](query)
+- [Anything else](query)
+- the query is [Something else](query)
+- [It can be anything else](query)
+- [from: patilshritej112@gmail.com](query)
+- [Sports : Football](query)
+- [from: patilshritej112@gmail.com](query)
+
+## intent:send_email
+- send a mail
+- send an email
+- send an email for me
+- send an email on my behalf
+- jarvis could you send an email for me
+- i would like to send an email
+- create a new mail and send it for me
+- jarvis send an email for me
+
+## intent:email_body_entry
+- [this is the body of the mail](email_body)
+- [This is random stuff.](email_body)
+- [Anything can be present here.](email_body)
+- [This is a rasa tutorial.](email_body)
+- [This project name is Corporate JARVIS.](email_body)
+
+## intent:receiver_entry
+- [abc@gmail.com](receiver)
+- [random@gmail.com](receiver)
+- [efg@gmail.com](receiver)
+- [abc123@gmail.com](receiver)
+- [receiver@gmail.com](receiver)
+
+## intent:subject_entry
+- [Subject](subject)
+- the subject is [Random stuff](subject)
+- [Anything can be here](subject)
+- [Something else](subject)
+- [This is the subject](subject)
+- [Unique](subject)
+- [Google forms](subject)
+
+## intent:send_email_with_attachments
+- send a mail with attachments
+- send an email with attachments
+- send an email for me with attachments
+- send an email with attachments on my behalf
+- jarvis could you send an email with an attachment for me
+- i would like to send an email with attachments
+- create a new mail with an attachment and send it for me
+- jarvis send an email with attachments for me
+
+
+## intent:file_dir_entry
+- the directory of the file is [./Attachments](file_dir)
+- dir is [./Dir](file_dir)
+- [./Dir1/Dir2/dir3](file_dir)
+- [./Rand](file_dir)
+- [./Back/front](file_dir)
+- [./front/Back](file_dir)
+- [./Attachments](file_dir)
+
+## intent:filename_entry
+- the file name is [abc.pdf](filename)
+- file named [random.jpg](filename)
+- [abc.docx](filename)
+- [anything.pdf](filename)
+- [something.png](filename)
+- [this.pdf](filename)
+- [ghi.docx](filename)
+
+
+
+
+## synonym:Bug
+- bug
+
+## synonym:Epic
+- epic
+
+## synonym:False
+- no
+- false
+- not yet
+
+## synonym:Story
+- story
+
+## synonym:Subtask
+- subtask
+
+## synonym:Task
+- task
+
+## synonym:True
+- yes
+- true
+
+## synonym:create
+- create
+- generate
+- add
+- new
+- schedule
+- make
+
+## synonym:delete
+- delete
+- remove
+
+## synonym:subtask
+- sub task
+
+
+
+
+
 ## synonym: commit
 - commit
 - code

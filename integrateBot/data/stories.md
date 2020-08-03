@@ -403,3 +403,416 @@
     - utter_submit
 * goodbye
     - utter_goodbye    
+
+
+## get_all_project_path_1
+* greet
+ - utter_greet
+* get_all_project_name
+ - get_all_project_name_form
+ - form{"name":"get_all_project_name_form"}
+ - form{"name":null}
+ - utter_get_all_project_name_cred
+
+## get_all_project_path_2
+* get_all_project_name
+ - get_all_project_name_form
+ - form{"name":"get_all_project_name_form"}
+ - form{"name":null}
+ - utter_get_all_project_name_cred
+
+
+## get_user_in_group_path_1
+* greet
+ - utter_greet
+* get_user_in_group
+ - get_user_in_group_form
+ - form{"name":"get_user_in_group_form"}
+ - form{"name":null}
+ - utter_get_user_in_group_cred
+
+## get_user_in_group_path_2
+* get_user_in_group
+ - get_user_in_group_form
+ - form{"name":"get_user_in_group_form"}
+ - form{"name":null}
+ - utter_get_user_in_group_cred
+
+## get_issue_in_project_path_1
+* greet
+ - utter_greet
+* get_issue_in_project
+ - get_issue_in_project_form
+ - form{"name":"get_issue_in_project_form"}
+ - form{"name":null}
+ - utter_get_issue_in_project_cred
+
+## get_issue_in_project_path_2
+* get_issue_in_project
+ - get_issue_in_project_form
+ - form{"name":"get_issue_in_project_form"}
+ - form{"name":null}
+ - utter_get_issue_in_project_cred
+ 
+## get_issue_path_1
+* greet
+ - utter_greet
+* get_issue
+ - get_issue_form
+ - form{"name":"get_issue_form"}
+ - form{"name":null}
+ - utter_get_issue_cred
+
+## get_issue_path_2
+* get_issue
+ - get_issue_form
+ - form{"name":"get_issue_form"}
+ - form{"name":null}
+ - utter_get_issue_cred
+
+## get_task_path_1
+* greet
+ - utter_greet
+* get_task
+ - get_task_form
+ - form{"name":"get_task_form"}
+ - form{"name":null}
+ - utter_get_task_cred
+
+## get_task_path_2
+* get_issue
+ - get_task_form
+ - form{"name":"get_task_form"}
+ - form{"name":null}
+ - utter_get_task_cred
+
+## get_epic_path_1
+* greet
+ - utter_greet
+* get_epic
+ - get_epic_form
+ - form{"name":"get_epic_form"}
+ - form{"name":null}
+ - utter_get_epic_cred
+
+## get_epic_path_2
+* get_epic
+ - get_epic_form
+ - form{"name":"get_epic_form"}
+ - form{"name":null}
+ - utter_get_epic_cred
+
+
+## get_status_of_issue_path_1
+* greet
+ - utter_greet
+* get_status_of_issue
+ - get_status_of_issue_form
+ - form{"name":"get_status_of_issue_form"}
+ - form{"name":null}
+ - utter_get_status_of_issue_cred
+
+## get_status_of_issue_path_2
+* get_status_of_issue
+ - get_status_of_issue_form
+ - form{"name":"get_status_of_issue_form"}
+ - form{"name":null}
+ - utter_get_status_of_issue_cred
+
+## get_status_of_epic_path_1
+* greet
+ - utter_greet
+* get_status_of_epic
+ - get_status_of_epic_form
+ - form{"name":"get_status_of_epic_form"}
+ - form{"name":null}
+ - utter_get_status_of_epic_cred
+
+## get_status_of_epic_path_2
+* get_status_of_epic
+ - get_status_of_epic_form
+ - form{"name":"get_status_of_epic_form"}
+ - form{"name":null}
+ - utter_get_status_of_epic_cred
+
+## get_status_of_task_path_1
+* greet
+ - utter_greet
+* get_status_of_task
+ - get_status_of_task_form
+ - form{"name":"get_status_of_task_form"}
+ - form{"name":null}
+ - utter_get_status_of_task_cred
+
+## get_status_of_task_path_2
+* get_status_of_task
+ - get_status_of_task_form
+ - form{"name":"get_status_of_task_form"}
+ - form{"name":null}
+ - utter_get_status_of_task_cred
+
+## get_issue_version_path_1
+* greet
+ - utter_greet
+* get_issue_version
+ - get_issue_version_form
+ - form{"name":"get_issue_version_form"}
+ - form{"name":null}
+ - utter_get_issue_version_cred
+
+## get_issue_version_path_2
+* get_issue_version
+ - get_issue_version_form
+ - form{"name":"get_issue_version_form"}
+ - form{"name":null}
+ - utter_get_issue_version_cred
+
+## get_epic_version_path_1
+* greet
+ - utter_greet
+* get_epic_version
+ - get_epic_version_form
+ - form{"name":"get_epic_version_form"}
+ - form{"name":null}
+ - utter_get_epic_version_cred
+
+## get_epic_version_path_2
+* get_epic_version
+ - get_epic_version_form
+ - form{"name":"get_epic_version_form"}
+ - form{"name":null}
+ - utter_get_epic_version_cred
+
+
+## get_task_version_path_1
+* greet
+ - utter_greet
+* get_task_version
+ - get_task_version_form
+ - form{"name":"get_task_version_form"}
+ - form{"name":null}
+ - utter_get_task_version_cred
+
+## get_task_version_path_2
+* get_issue_version
+ - get_issue_version_form
+ - form{"name":"get_issue_version_form"}
+ - form{"name":null}
+ - utter_get_issue_version_cred
+
+
+
+
+## get_comment_in_issues_path_1
+* greet
+ - utter_greet
+* get_comments_in_issue
+ - get_comment_issue_form
+ - form{"name":"get_comment_issue_form"}
+ - form{"name":null}
+ - utter_get_comment_issue_cred
+
+## get_comment_in_issues_path_2
+* get_comments_in_issue
+ - get_comment_issue_form
+ - form{"name":"get_comment_issue_form"}
+ - form{"name":null}
+ - utter_get_comment_issue_cred
+
+## get_comment_in_epic_path_1
+* greet
+ - utter_greet
+* get_comments_in_epic
+ - get_comment_epic_form
+ - form{"name":"get_comment_epic_form"}
+ - form{"name":null}
+ - utter_get_comment_epic_cred
+
+## get_comment_in_epic_path_2
+* get_comments_in_epic
+ - get_comment_epic_form
+ - form{"name":"get_comment_epic_form"}
+ - form{"name":null}
+ - utter_get_comment_epic_cred
+
+## get_comment_in_task_path_1
+* greet
+ - utter_greet
+* get_comments_in_task
+ - get_comment_task_form
+ - form{"name":"get_comment_task_form"}
+ - form{"name":null}
+ - utter_get_comment_task_cred
+
+## get_comment_in_task_path_2
+* get_comments_in_task
+ - get_comment_task_form
+ - form{"name":"get_comment_task_form"}
+ - form{"name":null}
+ - utter_get_comment_task_cred
+
+
+
+
+## get_worklog_in_issue_path_1
+* greet
+ - utter_greet
+* get_worklog_in_issue
+ - get_worklog_issue_form
+ - form{"name":"get_worklog_issue_form"}
+ - form{"name":null}
+ - utter_get_worklog_issue_cred
+
+ 
+## get_worklog_in_issue_path_2
+* get_worklog_in_issue
+ - get_worklog_issue_form
+ - form{"name":"get_worklog_issue_form"}
+ - form{"name":null}
+ - utter_get_worklog_issue_cred
+
+## get_worklog_in_task_path_1
+* greet
+ - utter_greet
+* get_worklog_in_task
+ - get_worklog_task_form
+ - form{"name":"get_worklog_task_form"}
+ - form{"name":null}
+ - utter_get_worklog_task_cred
+
+ 
+## get_worklog_in_task_path_2
+* get_worklog_in_task
+ - get_worklog_task_form
+ - form{"name":"get_worklog_task_form"}
+ - form{"name":null}
+ - utter_get_worklog_task_cred
+
+## get_worklog_in_epic_path_1
+* greet
+ - utter_greet
+* get_worklog_in_epic
+ - get_worklog_epic_form
+ - form{"name":"get_worklog_epic_form"}
+ - form{"name":null}
+ - utter_get_worklog_epic_cred
+
+ 
+## get_worklog_in_epic_path_2
+* get_worklog_in_epic
+ - get_worklog_epic_form
+ - form{"name":"get_worklog_epic_form"}
+ - form{"name":null}
+ - utter_get_worklog_epic_cred    
+
+
+## get latest email in inbox
+* greet
+  - utter_greet
+* get_latest_email_in_inbox
+  - utter_choose_option
+  - action_listen
+  - action_get_latest_email_in_inbox
+* goodbye
+  - utter_goodbye   
+
+## get latest mail from user
+* greet
+  - utter_greet
+* get_latest_email_from_user
+  - utter_email_id_format
+  - utter_ask_query
+  - action_listen
+  - utter_choose_option_user
+  - action_listen
+  - action_get_latest_email_from_user
+* goodbye
+  - utter_goodbye  
+
+##  get latest mail from label
+* greet
+  - utter_greet
+* get_latest_email_from_label
+  - utter_label_format
+  - utter_ask_query
+  - action_listen
+  - utter_choose_option
+  - action_listen
+  - action_get_latest_email_from_label
+* goodbye
+  - utter_goodbye  
+
+## send email
+* greet
+  - utter_greet
+* send_email
+  - send_email_form
+  - form{"name": "send_email_form"}
+  - form{"name": null}  
+  - utter_send_email_slot_values
+* goodbye
+  - utter_goodbye  
+
+## send email with attachments
+* greet
+  - utter_greet
+* send_email_with_attachments
+  - send_email_with_attachments_form
+  - form{"name": "send_email_with_attachments_form"}
+  - form{"name": null}
+  - utter_send_email_slot_values  
+* goodbye
+  - utter_goodbye
+
+
+## interactive_story_1
+* greet
+    - utter_greet
+* get_latest_email_from_user
+    - utter_email_id_format
+    - utter_ask_query
+* query_entry{"query": "from: patilshritej112@gmail.com"}
+    - slot{"query": "from: patilshritej112@gmail.com"}
+    - utter_choose_option_user
+* get_latest_email_from_user
+    - action_get_latest_email_from_user
+* goodbye
+    - utter_goodbye
+
+## interactive_story_1
+* greet
+    - utter_greet
+* get_latest_email_from_user
+    - utter_email_id_format
+    - utter_ask_query
+* query_entry{"query": "from: patilshritej112@gmail.com"}
+    - slot{"query": "from: patilshritej112@gmail.com"}
+    - utter_choose_option_user
+* get_latest_email_from_user
+    - action_get_latest_email_from_user
+* goodbye
+    - utter_goodbye
+
+## interactive_story_1
+* greet
+    - utter_greet
+* get_latest_email_from_label
+    - utter_label_format
+    - utter_ask_query
+* query_entry{"query": "Sports : Football"}
+    - slot{"query": "Sports : Football"}
+    - utter_choose_option
+* get_latest_email_from_label
+    - action_get_latest_email_from_label
+
+## interactive_story_1
+* greet
+    - utter_greet
+* get_latest_email_from_user
+    - utter_email_id_format
+    - utter_ask_query
+* query_entry{"query": "from: patilshritej112@gmail.com"}
+    - slot{"query": "from: patilshritej112@gmail.com"}
+    - utter_choose_option_user
+* option_entry
+    - action_get_latest_email_from_user 
