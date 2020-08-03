@@ -86,5 +86,7 @@ To host the frontend:
 This project is licensed under the Apache-2.0 License - see the [LICENSE.txt](https://github.com/JKhan01/SM446_TeamXYZ/blob/master/LICENSE.txt) file for details.
 
 ## Acknowledgments
+* [Font Awesome](https://cdnjs.com/libraries/font-awesome)
+* [JacobLett](https://codepen.io/JacobLett/pen/QrpJEp)
 * [Purplebooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
 
