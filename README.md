@@ -15,7 +15,7 @@ The developed software is a Python-based web application(Flask) which acts as an
 ### Prerequisites
 All the dependencies required to run the app are available in [reqirements.txt](https://github.com/JKhan01/SM446_TeamXYZ/blob/master/backend/requirements.txt).
 
-The application also requires a Redis server for session storage which is our primary database.
+The application also requires a Redis server for session storage.
 
 You can choose a hosted service for the requirement, or you can choose to host it yourself.
 Download link and hosting information is available at the following links:
