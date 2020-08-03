@@ -17,8 +17,8 @@ All the dependencies required to run the app are available in [reqirements.txt](
 
 The application also requires a Redis server for session storage which is our primary database.
 
-You can choose a hosted service for both these requirement, or you can choose to host them yourself.
-Download links and hosting information is available at the following links:
+You can choose a hosted service for the requirement, or you can choose to host it yourself.
+Download link and hosting information is available at the following links:
 - [Redis](https://redis.io/)
 
 The application also requires a browser and python(>3) to function.
