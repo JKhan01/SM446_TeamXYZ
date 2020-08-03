@@ -59,13 +59,9 @@ To host the frontend:
   - [JIRA API](https://developer.atlassian.com/server/jira/platform/rest-apis/) -  Used to access and execute tasks on the JIRA board.
   - [Bitbucket API](https://developer.atlassian.com/bitbucket/api/2/reference/) - Used to access the company’s Bitbucket repository.
   - [Confluence API](https://docs.atlassian.com/atlassian-confluence/REST/6.6.0/) - Used to access and execute tasks on the Confluence board.
-- Google API:
-  - [Gmail API](https://developers.google.com/gmail/api) - Used to access and send the company’s email.
-  - [Google Speech Recognition](https://cloud.google.com/speech-to-text) - Used for speech recognition and speech to text.
-- [MongoDB](https://docs.mongodb.com/) - Used to store chats and meetings.
-- [AWS S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html) - Used to store audio files of the meetings.
+- [Gmail API](https://developers.google.com/gmail/api) - Used to access and send the company’s email.
+- [Web Speech API](https://wicg.github.io/speech-api/) - Used for speech recognition and speech to text.
 - [Redis](https://redis.io/documentation) - Used for session management. 
-- [Celery](https://docs.celeryproject.org/en/stable/) - Used for task chaining and queue management.
 - [Rasa](https://rasa.com/docs/) - A chatbot framework used to understand, interpret end-user queries and appropriately fetch response data over REST and scraping.
 - [Flask](https://flask.palletsprojects.com/en/1.1.x/) -  It is a python micro-framework which will be used to provide a web interface. 
 
@@ -87,6 +83,8 @@ This project is licensed under the Apache-2.0 License - see the [LICENSE.txt](ht
 
 ## Acknowledgments
 * [Font Awesome](https://cdnjs.com/libraries/font-awesome)
+* [Choose a license](https://choosealicense.com/community/) 
+* [Bootstrap](https://getbootstrap.com/docs/3.3/getting-started/)
 * [JacobLett](https://codepen.io/JacobLett/pen/QrpJEp)
 * [Purplebooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
 
