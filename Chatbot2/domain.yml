@@ -22,6 +22,20 @@ actions:
 - utter_space_info_slot_value
 - utter_export_page_as_pdf_slot_values
 - utter_submit
+- action_get_latest_email_from_label
+- action_get_latest_email_from_user
+- action_get_latest_email_in_inbox
+- utter_send_email_slot_values
+- utter_ask_query
+- utter_ask_body
+- utter_ask_receiver
+- utter_ask_subject
+- utter_choose_option
+- utter_choose_option_user
+- utter_email_id_format
+- utter_goodbye
+- utter_greet
+- utter_label_format
 entities:
 - body
 - key
@@ -29,6 +43,10 @@ entities:
 - space
 - title
 - file_name
+- query
+- body
+- receiver
+- subject
 forms:
 - check_page_exists_form
 - create_page_form
@@ -36,6 +54,7 @@ forms:
 - get_page_id_form
 - get_page_info_by_title_form
 - export_page_as_pdf_form
+- send_email_form
 intents:
 - get_page_info_by_id
 - greet
@@ -59,6 +78,16 @@ intents:
 - get_page_info_by_title
 - export_page_as_pdf
 - file_name_entry
+- option_entry
+- query_entry
+- get_latest_email_from_user
+- get_latest_email_from_label
+- get_latest_email_in_inbox
+- send_email
+- send_email_with_attachments
+- body_entry
+- receiver_entry
+- subject_entry
 responses:
   utter_ask_body:
   - text: Enter the body of the page to be created
@@ -97,6 +126,26 @@ responses:
   - text: The space whose details are to be fetched has the key {key}
   utter_submit:
   - text: Done
+  utter_ask_query:
+  - text: Please enter the query
+  utter_ask_body:
+  - text: Enter the body of the email
+  utter_ask_receiver:
+  - text: Enter the receiver's email address
+  utter_ask_subject:
+  - text: Enter the subject of the email      
+  utter_choose_option:
+  - text: "What information do you want to retrieve : \n 1. Entire Info\n 2. Body\
+      \ snippet\n 3. Subject\n 4. Entire Body\n 5. Sender\n 6. Receiver"
+  utter_choose_option_user:
+  - text: "What information do you want to retrieve : \n 1. Entire Info\n 2. Body\
+      \ snippet\n 3. Subject\n 4. Entire Body"
+  utter_email_id_format:
+  - text: "For retrieving emails from a specific user, give query as 'from: sample@gmail.com'"
+  utter_send_email_slot_values:
+  - text: "The email has to be sent to the email address : {receiver} with the subject : {subject}"
+  utter_label_format:
+  - text: For retrieving emails from a label, give query as 'label_name'
 session_config:
   carry_over_slots_to_new_session: true
   session_expiration_time: 60
@@ -115,3 +164,11 @@ slots:
     type: unfeaturized
   file_name:
     type: unfeaturized  
+  query:
+    type: unfeaturized
+  body:
+    type: unfeaturized
+  receiver:
+    type: unfeaturized
+  subject:
+    type: unfeaturized 

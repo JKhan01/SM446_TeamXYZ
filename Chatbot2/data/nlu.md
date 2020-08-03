@@ -282,3 +282,103 @@
 - [Math](file_name) is the title of the pdf file
 - the pdf file's name is [physics](file_name)
 - [Chemistry](file_name)
+
+
+## intent:get_latest_email_in_inbox
+- get the latest mail present in the inbox
+- retrieve the last mail i have received
+- fetch the latest mail that was sent to me
+- fetch the most recent email that i have received
+- i want you to get the latest email present from the inbox
+- jarvis i would appreciate if you could fetch the latest email present in the inbox
+- jarvis fetch me the last email i have received
+
+## intent:get_latest_email_from_user
+- get the latest mail from a specific user
+- get the latest email sent by a specific user
+- retrieve the last mail i have received from the user which i will mention
+- fetch the latest mail that was sent to me by a specific person
+- fetch the most recent email that i have received from the person that i am going to specify
+- i want you to get the latest email present from the inbox that was sent to me by the specific user
+- jarvis i would appreciate if you could fetch the latest email present in the inbox which was sent to me by a specific user
+- jarvis fetch me the last email i have received from the user that i am gonna specify
+- get the latest email from a specific user
+- get the latest mail from the specific user
+
+## intent:option_entry
+- 1
+- 3
+- 6
+- 5
+- 2
+- 4
+
+## intent:get_latest_email_from_label
+- get the latest mail from a specific label
+- get the latest email sent by a specific label
+- retrieve the last mail i have received from the label which i will mention
+- fetch the latest mail that was sent to me with a specific label
+- fetch the most recent email that i have received with the label that i am going to specify
+- i want you to get the latest email present from the inbox that was sent to me with the specific label
+- jarvis i would appreciate if you could fetch the latest email present in the inbox which was sent to me with a specific label
+- jarvis fetch me the last email i have received with the label that i am gonna specify
+- get the latest email with a specific label
+- get the latest email with the specified label
+
+## intent:query_entry
+- the query is [from: sample@gmail.com](query)
+- [from: abc@gmail.com](query)
+- query is [from: efg@gmail.com](query)
+- [from: ab234@gmail.com](query)
+- [from: random123@gmail.com](query)
+- [Testing](query)
+- [Random](query)
+- [Anything else](query)
+- the query is [Something else](query)
+- [It can be anything else](query)
+- [from: patilshritej112@gmail.com](query)
+- [Sports : Football](query)
+- [from: patilshritej112@gmail.com](query)
+
+## intent:send_email
+- send a mail
+- send an email
+- send an email for me
+- send an email on my behalf
+- jarvis could you send an email for me
+- i would like to send an email
+- create a new mail and send it for me
+- jarvis send an email for me
+
+## intent:body_entry
+- [this is the body of the mail](body)
+- [This is random stuff.](body)
+- [Anything can be present here.](body)
+- [This is a rasa tutorial.](body)
+- [This project name is Corporate JARVIS.](body)
+
+## intent:receiver_entry
+- [abc@gmail.com](receiver)
+- [random@gmail.com](receiver)
+- [efg@gmail.com](receiver)
+- [abc123@gmail.com](receiver)
+- [receiver@gmail.com](receiver)
+
+## intent:subject_entry
+- [Subject](subject)
+- the subject is [Random stuff](subject)
+- [Anything can be here](subject)
+- [Something else](subject)
+- [This is the subject](subject)
+- [Unique](subject)
+- [Google forms](subject)
+
+## intent:send_email_with_attachments
+- send a mail with attachments
+- send an email with attachments
+- send an email for me with attachments
+- send an email with attachments on my behalf
+- jarvis could you send an email with an attachment for me
+- i would like to send an email with attachments
+- create a new mail with an attachment and send it for me
+- jarvis send an email with attachments for me

@@ -168,6 +168,64 @@
   - utter_goodbye
 
 
+## get latest email in inbox
+* greet
+  - utter_greet
+* get_latest_email_in_inbox
+  - utter_choose_option
+  - action_listen
+  - action_get_latest_email_in_inbox
+* goodbye
+  - utter_goodbye   
+
+## get latest mail from user
+* greet
+  - utter_greet
+* get_latest_email_from_user
+  - utter_email_id_format
+  - utter_ask_query
+  - action_listen
+  - utter_choose_option_user
+  - action_listen
+  - action_get_latest_email_from_user
+* goodbye
+  - utter_goodbye  
+
+##  get latest mail from label
+* greet
+  - utter_greet
+* get_latest_email_from_label
+  - utter_label_format
+  - utter_ask_query
+  - action_listen
+  - utter_choose_option
+  - action_listen
+  - action_get_latest_email_from_label
+* goodbye
+  - utter_goodbye  
+
+## send email
+* greet
+  - utter_greet
+* send_email
+  - send_email_form
+  - form{"name": "send_email_form"}
+  - form{"name": null}  
+  - utter_send_email_slot_values
+* goodbye
+  - utter_goodbye
+
+
+## send email with attachments  
+* greet
+  - utter_greet
+* send_email_with_attachments
+  - action_send_email_with_attachments
+* goodbye
+  - utter_goodbye  
+
+
+
 
 ## interactive_story_1
 * greet

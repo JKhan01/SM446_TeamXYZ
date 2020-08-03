@@ -15,10 +15,10 @@ from rasa_sdk.forms import FormAction
 from rasa_sdk.events import SlotSet
 
 from functions import *
+from g5 import *
+from g6 import *
 
-
-slotList = ["space", "key", "body", "page_id", "title", "file_name"]
-
+slotList = ["space", "key", "body", "page_id", "title", "file_name", "body", "receiver", "subject", "query"]
 #
 #
 # class ActionHelloWorld(Action):
@@ -454,4 +454,141 @@ class ExportPageAsPdf(FormAction):
 
         run(self, CollectingDispatcher, Tracker, Dict[Text, Any])
         dispatcher.utter_message(text="Page Exported")
+        return []
+
+
+class GetLatestInboxEmail(Action):
+
+    def name(self) -> Text:
+        return "action_get_latest_email_in_inbox"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        op = int(tracker.latest_message.get('text'))
+        t = LatestMailInInbox(op)
+        # tx = json.dumps(t, indent = 4)
+        # txt = json.loads(tx)
+        # txtt = json.dumps(txt, indent = 2)
+        
+        dispatcher.utter_message(text=t)
+
+        return []
+
+
+class GetLatestUserEmail(Action):
+
+    def name(self) -> Text:
+        return "action_get_latest_email_from_user"
+
+    # @staticmethod
+    # def required_slots(tracker: Tracker) -> List[Text]:
+    #     """ The required entries for this function """
+
+    #     print("required_slots(tracker : Tracker)")
+    #     return ["query"]
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        q = str(tracker.get_slot("query"))
+        op = int(tracker.latest_message.get('text'))
+        t = GetLatestMailFromUser(q, op)
+        #tx = json.dumps(t, indent = 4)
+        # txt = json.loads(tx)
+        # txtt = json.dumps(txt, indent = 2)
+        
+        dispatcher.utter_message(text=t)
+
+        return []
+
+
+class GetLatestLabelEmail(Action):
+
+    def name(self) -> Text:
+        return "action_get_latest_email_from_label"
+
+    # @staticmethod
+    # def required_slots(tracker: Tracker) -> List[Text]:
+    #     """ The required entries for this function """
+
+    #     print("required_slots(tracker : Tracker)")
+    #     return ["query"]
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        q = str(tracker.get_slot("query"))
+        op = int(tracker.latest_message.get('text'))
+        t = GetLatestMailFromLabel(q, op)
+        #tx = json.dumps(t, indent = 4)
+        # txt = json.loads(tx)
+        # txtt = json.dumps(txt, indent = 2)
+        
+        dispatcher.utter_message(text=t)
+
+        return []
+
+
+class SendEmail(FormAction):
+
+    def name(self) -> Text:
+        return "send_email_form"
+
+    def slot_mappings(self):
+        # type: () -> Dict[Text: Union[Dict, List[Dict]]]
+
+        return {"body": [self.from_entity(entity="body"),
+                            self.from_text()],
+                "receiver": [self.from_entity(entity="receiver"),
+                            self.from_text()],
+                "subject": [self.from_entity(entity="subject"),
+                            self.from_text()]}
+
+    @staticmethod
+    def required_slots(tracker: Tracker) -> List[Text]:
+        """ The required entries for this function """
+
+        print("required_slots(tracker : Tracker)")
+        return ["receiver", "subject", "body"]
+
+
+    def submit(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict]:
+
+        a = str(tracker.get_slot("body"))
+        b = str(tracker.get_slot("receiver"))
+        c = str(tracker.get_slot("subject"))
+
+        def run(self, dispatcher: CollectingDispatcher,
+                tracker: Tracker,
+                domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+            SendMail(a, b, c)
+            
+            return []
+
+        dispatcher.utter_message(text="Email Sent")
+
+        return []
+
+
+
+class SendEmailWithAttachments(Action):
+
+    def name(self) -> Text:
+        return "action_send_email_with_attachments"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        SendMailWithAttachments()
+
+        dispatcher.utter_message(text="Email Sent")
+
         return []
