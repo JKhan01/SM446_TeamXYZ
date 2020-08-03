@@ -60,7 +60,7 @@ To host the frontend:
   - [Bitbucket API](https://developer.atlassian.com/bitbucket/api/2/reference/) - Used to access the company’s Bitbucket repository.
   - [Confluence API](https://docs.atlassian.com/atlassian-confluence/REST/6.6.0/) - Used to access and execute tasks on the Confluence board.
 - Google API:
-  -[Gmail API](https://developers.google.com/gmail/api) - Used to access and send the company’s email.
+  - [Gmail API](https://developers.google.com/gmail/api) - Used to access and send the company’s email.
   - [Google Speech Recognition](https://cloud.google.com/speech-to-text) - Used for speech recognition and speech to text.
 - [MongoDB](https://docs.mongodb.com/) - Used to store chats and meetings.
 - [AWS S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html) - Used to store audio files of the meetings.
