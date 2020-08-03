@@ -15,12 +15,11 @@ The developed software is a Python-based web application(Flask) which acts as an
 ### Prerequisites
 All the dependencies required to run the app are available in [reqirements.txt](https://github.com/JKhan01/SM446_TeamXYZ/blob/master/backend/requirements.txt).
 
-The application also requires a Redis server for session storage and a MongoDB server which is our primary database.
+The application also requires a Redis server for session storage which is our primary database.
 
 You can choose a hosted service for both these requirement, or you can choose to host them yourself.
 Download links and hosting information is available at the following links:
 - [Redis](https://redis.io/)
-- [Mongo](https://www.mongodb.com/)
 
 The application also requires a browser and python(>3) to function.
 Python can be downloaded from [link](https://www.python.org/), installation instructions are also provided at the link.
@@ -37,10 +36,9 @@ To start the backend service:
 3. Add the following lines of code<br>
 ```
 SECRET_KEY=
-MONGO_URL=
 REDIS_URL=
 ```
-4. Set the variables (there should be no space after '='). SECRET_KEY can be any randomly generated string. MONGO_URL and REDIS_URL give the URL's to the MongoDB and Redis services respectively.
+4. Set the variables (there should be no space after '='). SECRET_KEY can be any randomly generated string. REDIS_URL give the URL's to the Redis services respectively.
 5. Start the server with `flask run`
 
 To host the frontend:
