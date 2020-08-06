@@ -6,8 +6,8 @@ import pprint
 
 # OAUTH auth = HTTPBasicAuth("rohitkadyash@gmail.com", "UpwcB7QfUzWFxgqlxJAOE06E")
 
-username = "rohitkadyash@gmail.com" #accept from user
-apitoken = "UpwcB7QfUzWFxgqlxJAOE06E" #accept from user 
+# username = "" #accept from user
+# apitoken = "" #accept from user 
 
 auth = HTTPBasicAuth( username , apitoken)
 

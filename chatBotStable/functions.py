@@ -4,9 +4,9 @@ from pprint import pprint
 import json
 
 cf = Confluence(
-    url='https://shritej112.atlassian.net/',
-    username='patilshritej112@gmail.com',
-    password='c59BywMlA8hy4mFsWW3U53D2'
+    # url= '''' atlassian wwebsite of teh end-client,
+    # username='''' registered email-id of the end client,
+    # password=''''' access token to access the project pages of the end client
     )
 
 # Define all the Confluence functions here
