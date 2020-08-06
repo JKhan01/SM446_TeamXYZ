@@ -25,12 +25,12 @@ action_endpoint:
 #    password: <password used for authentication>
 #    use_ssl: <whether or not the communication is encrypted, default false>
 
-tracker_store:
-   type: mongod
-   url: mongodb+srv://botUser:botUser@chatcluster.xbrco.mongodb.net/rasaBase?retryWrites=true&w=majority
-   db: rasaBase
-   username: botUser
-   password: botUser
+# tracker_store:
+#    type: mongod
+#    url: 
+#    db: 
+#    username: 
+#    password: 
 
 # Event broker which all conversation events should be streamed to.
 # https://rasa.com/docs/rasa/api/event-brokers/
